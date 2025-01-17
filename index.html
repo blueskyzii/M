@@ -7,121 +7,138 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1-crypto-js.min.js"></script>
 </head>
 <body>
     <body>
-        <header>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
+        <div id="overlay">
+            <div id="auth-box">
+                <h2>Wht's ur name?</h2>
+                <p>Please enter your full Name (all caps)</p>
+                <input type="text" id="password">
+                <button onclick="checkPassword()">Submit</button>
+                <p id="error" class="error"></p>
             </div>
+        </div>
+        <div id="content">
+            <header>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                
+                <h1>Personal Blog</h1>
+            </header>
             
-            <h1>Personal Blog</h1>
-        </header>
+            <!-- Overlay -->
+            <div class="overlay" onclick="toggleMenu()"></div>
         
-        <div class="notification-popup" id="notificationPopup">
-            <span class="icon">📖</span>
-            <div class="message">
-                Jangan lewatkan cerita menarik di bawah! Baca sampai akhir atau setidaknya cerita pendeknya!
+            <!-- Side Panel -->
+            <div class="side-panel">
+                <h2>My Profile</h2>
+                <div class="side-text-box">
+                <p><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
+                    <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
+                    <i class="fas fa-heart"></i> Fav Girl 4d617961<br>
+                    <i class="fas fa-lock icon"></i> My birth date is 24-0x-200x</p>
+                    <p class="more-text hidden">“Translate:</p>
+                </div>
+                <img src="images.jpeg" alt="">
+                <span>NB: sorry I lost the original photo.</span>
+                <div class="side-social">
+                    <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
+                    <a href="https://tiktok.com/blueskyzii"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/6285182012498"><i class="fas fa-comments"></i></a>
+                </div>
             </div>
-            <button class="button" onclick="scrollToStory()">Baca Sekarang</button>
-        </div>
-
-        <!-- Overlay -->
-        <div class="overlay" onclick="toggleMenu()"></div>
-    
-        <!-- Side Panel -->
-        <div class="side-panel">
-            <h2>My Profile</h2>
-            <div class="side-text-box">
-            <p><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
-                <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
-                <i class="fas fa-heart"></i> Fav Girl 4d617961<br>
-                <i class="fas fa-lock icon"></i> My birth date is 24-0x-200x</p>
-                <p class="more-text hidden">“Translate:</p>
+            <div class="motivation">
+                <span class="motivation">"Never let a lack of literacy hold you back. Reading is the key to unlocking your potential—so take the time to read until the end, for every word brings you closer to knowledge and growth."</span>
             </div>
-            <img src="images.jpeg" alt="">
-            <span>NB: sorry I lost the original photo.</span>
-            <div class="side-social">
-                <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
-                <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
-                <a href="https://tiktok.com/blueskyzii"><i class="fab fa-tiktok"></i></a>
-                <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/6285182012498"><i class="fas fa-comments"></i></a>
+            <div class="isi-blog">
+                <h2>WELCOME.</h2>
+                <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
+                <img src="setup.jpg" alt="">
+                <h2>Produktif.</h2>
+                <p>Terkadang, kita merasa lelah dan terbebani dengan banyaknya hal yang harus dilakukan. Malas datang menghampiri, dan rasanya semua yang ingin kita capai terasa begitu jauh. Namun, ingatlah bahwa setiap langkah kecil yang kita ambil hari ini adalah bagian dari perjalanan besar yang sedang kita jalani. Rasa malas memang wajar, tapi jangan biarkan itu menghalangi impianmu. Setiap detik yang kita sia-siakan tidak akan kembali, sementara waktu terus berjalan, membawa kita lebih dekat atau lebih jauh dari tujuan kita. Cobalah untuk bangkit, walau hanya sedikit demi sedikit. Lakukan sesuatu, bahkan jika itu terasa kecil, karena terkadang kemajuan terbesar dimulai dari langkah yang tampak paling kecil. Percayalah, keberhasilan bukanlah tentang menghindari rasa malas, tetapi tentang terus maju meski kadang kita merasa tidak ingin melangkah. Tetap produktif, tetap berusaha, dan lihatlah bagaimana setiap usaha akan membuahkan hasil yang tak terduga.</p>
             </div>
-        </div>
-        <div class="motivation">
-            <span class="motivation">"The future belongs to those who believe in the beauty of their dreams."</span>
-        </div>
-        <div class="isi-blog">
-            <h2>WELCOME.</h2>
-            <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
-            <img src="setup.jpg" alt="">
-            <h2>Produktif.</h2>
-            <p>Terkadang, kita merasa lelah dan terbebani dengan banyaknya hal yang harus dilakukan. Malas datang menghampiri, dan rasanya semua yang ingin kita capai terasa begitu jauh. Namun, ingatlah bahwa setiap langkah kecil yang kita ambil hari ini adalah bagian dari perjalanan besar yang sedang kita jalani. Rasa malas memang wajar, tapi jangan biarkan itu menghalangi impianmu. Setiap detik yang kita sia-siakan tidak akan kembali, sementara waktu terus berjalan, membawa kita lebih dekat atau lebih jauh dari tujuan kita. Cobalah untuk bangkit, walau hanya sedikit demi sedikit. Lakukan sesuatu, bahkan jika itu terasa kecil, karena terkadang kemajuan terbesar dimulai dari langkah yang tampak paling kecil. Percayalah, keberhasilan bukanlah tentang menghindari rasa malas, tetapi tentang terus maju meski kadang kita merasa tidak ingin melangkah. Tetap produktif, tetap berusaha, dan lihatlah bagaimana setiap usaha akan membuahkan hasil yang tak terduga.</p>
-        </div>
 
-        <section class="featured-posts">
-        </div>
+            <section class="featured-posts">
 
-        <div id="story" class="text-box">
-            <h3 class="story">Short Story</h3>
-            <p>Di sebuah desa kecil, terdapat dua anak kecil, seorang anak laki-laki dan seorang anak perempuan, menghabiskan hari-hari mereka bermain bersama. Mereka tertawa, berlarian, dan membangun kenangan yang tak terlupakan. Namun kebahagiaan mereka berubah ketika si gadis harus pindah ke luar negeri bersama keluarganya. Sebelum pergi, dia menyadari bahwa dia memiliki perasaan terhadap teman masa kecilnya, tetapi tidak pernah mendapat kesempatan untuk mengungkapkannya.</p>
+            <div id="story" class="text-box">
+                <h3 class="story">Short Story</h3>
+                <p>Di sebuah desa kecil, terdapat dua anak kecil, seorang anak laki-laki dan seorang anak perempuan, menghabiskan hari-hari mereka bermain bersama. Mereka tertawa, berlarian, dan membangun kenangan yang tak terlupakan. Namun kebahagiaan mereka berubah ketika si gadis harus pindah ke luar negeri bersama keluarganya. Sebelum pergi, dia menyadari bahwa dia memiliki perasaan terhadap teman masa kecilnya, tetapi tidak pernah mendapat kesempatan untuk mengungkapkannya.</p>
+            
+                <p>Sementara itu, si anak laki-laki merindukannya setiap hari. Dia mencoba berbagai cara untuk menghubunginya, dan setelah delapan tahun yang panjang, akhirnya dia berhasil. Ketika mereka terhubung kembali si anak perempuan menggunakan bahasa yang sedikit menjadi halangan si anak laki-laki, mereka berjanji untuk menunggu satu sama lain sampai suatu saat, apapun yang terjadi.</p>
         
-            <p>Sementara itu, si anak laki-laki merindukannya setiap hari. Dia mencoba berbagai cara untuk menghubunginya, dan setelah delapan tahun yang panjang, akhirnya dia berhasil. Ketika mereka terhubung kembali si anak perempuan menggunakan bahasa yang sedikit menjadi halangan si anak laki-laki, mereka berjanji untuk menunggu satu sama lain sampai suatu saat, apapun yang terjadi.</p>
-    
-            <p>Namun, hidup tidak selalu baik. Seiring waktu, anak laki-laki itu berubah. Sebuah peristiwa besar dalam hidupnya membuatnya takut dan membuatnya mengidap kecemasan berlebih (Anxiety) yang membuatnya susah menghadapi situasi sosial. Setelah lulus dari sekolah menengah, seorang gadis lain mengungkapkan perasaannya kepadanya. Gadis ini kebetulan tahu tentang teman masa kecilnya dan menghubunginya karena suatu alasan. Tak lama setelah itu, dia menerima surat dari teman masa kecilnya—surat yang mengungkapkan perasaan gadis itu. Namun karena Anxiety-nya, dia berpura-pura tidak pernah melihat isinya karena suatu alasan yang tidak bisa di jelaskan.</p>
-    
-            <p>Anxiety-nya semakin dalam. Dia memilih untuk diam mengabaikan gadis yang telah mengungkapkan perasaannya dan tidak sengaja mengabaikan teman masa kecilnya juga. Suatu hari, dia melakukan kesalahan besar. Ketika mencoba menghubungi teman masa kecilnya, saat dia bertanya, "Apakah kamu sedang berkencan dengannya?"—merujuk pada gadis yang mengungkapkan perasaannya kepadanya—dia tidak bisa menjawab dengan benar padahal dia tidak berkencan dengan siapapun. Diamnya menyebabkan teman masa kecilnya salah paham, percaya bahwa dia benar-benar dalam hubungan dengan gadis itu dan membuatnya berpikir bawha dirinya adalah Second choice.</p>
-    
-            <p>Seiring berjalannya waktu, keluarganya menghadapi krisis besar, memaksanya untuk untuk pindah dari desa itu dan memutuskan hubungan dengan semua orang yang ada di desa itu, termasuk teman masa kecilnya. Beberapa tahun kemudian, dia mencoba menghubunginya lagi, berharap untuk mengonfirmasi apakah janji mereka masih berlaku karena anak laki-laki tidak mau berpisah dengannya. Namun saat itu, teman masa kecilnya sudah kecewa dan dia bingung lalu diam dan tidak berani memberikan penjelasan.</p>
-    
-            <p>Dengan setiap hari yang berlalu, penyesalannya semakin dalam. Dia sangat ingin menjelaskan semuanya dari awal, tetapi tertahan oleh rasa takut—takut karena dirinya tidak pantas dengan dia karena keluarga nya yang bermasalah dan takut karena Anxiety Anxiety-nya. Pada akhirnya, anak laki-laki itu hidup dalam kesendirian, terperangkap dalam kenangan yang tidak pernah bisa dia lepaskan.</p>
+                <p>Namun, hidup tidak selalu baik. Seiring waktu, anak laki-laki itu berubah. Sebuah peristiwa besar dalam hidupnya membuatnya takut dan menghantui dirinya yang membuatnya susah menghadapi situasi sosial. Setelah lulus dari sekolah menengah, seorang gadis lain mengungkapkan perasaannya kepadanya. Gadis ini kebetulan tahu tentang teman masa kecilnya dan menghubunginya karena suatu alasan. Tak lama setelah itu, dia menerima surat dari teman masa kecilnya—surat yang mengungkapkan perasaan gadis itu. Namun karena bayangan yang mennghantui-nya, dia berpura-pura tidak pernah melihat isinya karena suatu alasan yang tidak bisa di jelaskan.</p>
+        
+                <p>bayangan yang mennghantui-nya semakin dalam. Dia memilih untuk diam mengabaikan gadis yang telah mengungkapkan perasaannya dan tidak sengaja mengabaikan teman masa kecilnya juga. Suatu hari, dia melakukan kesalahan besar. Ketika mencoba menghubungi teman masa kecilnya, saat dia bertanya, "Apakah kamu sedang berkencan dengannya?"—merujuk pada gadis yang mengungkapkan perasaannya kepadanya—dia tidak bisa menjawab dengan benar padahal dia tidak berkencan dengan siapapun. Diamnya menyebabkan teman masa kecilnya salah paham, percaya bahwa dia benar-benar dalam hubungan dengan gadis itu dan membuatnya berpikir bawha dirinya adalah Second choice.</p>
+        
+                <p>Seiring berjalannya waktu, dia terpaksa untuk untuk pindah dari desa itu dan memutuskan hubungan dengan semua orang yang ada di desa itu, termasuk teman masa kecilnya. Beberapa tahun kemudian, dia mencoba menghubunginya lagi, berharap untuk mengonfirmasi apakah janji mereka masih berlaku karena anak laki-laki tidak mau berpisah dengannya. Namun saat itu, teman masa kecilnya sudah kecewa dan dia bingung lalu diam dan tidak berani memberikan penjelasan.</p>
+        
+                <p>Dengan setiap hari yang berlalu, penyesalannya semakin dalam. Dia sangat ingin menjelaskan semuanya dari awal, tetapi tertahan oleh rasa takut—takut karena dirinya tidak pantas dengan dia karena keluarga nya yang bermasalah dan takut karena bayangan yang mennghantui-nya. Pada akhirnya, anak laki-laki itu hidup dalam kesendirian, terperangkap dalam kenangan yang tidak pernah bisa dia lepaskan.</p>
 
-            <p>Namun, di dalam hatinya, anak laki-laki itu terus berharap agar dirinya sembuh dari penyakit yang menghalanginya untuk berbicara dengan jelas. Dia berharap suatu hari nanti, teman masa kecilnya akan menghubunginya lagi. Ketika itu terjadi, dia berjanji akan menjelaskan semuanya dari awal dan melawan penyakit yang (mungkin) menyebabkan kesalahpahaman tersebut.</p>
+                <p>Namun, di dalam hatinya, anak laki-laki itu terus berharap agar dirinya sembuh dari bayangan yang menghalanginya untuk berbicara dengan jelas. Dia berharap suatu hari nanti, teman masa kecilnya akan menghubunginya lagi. Ketika itu terjadi, dia berjanji akan menjelaskan semuanya dari awal dan melawan bayangan yang menghantuinya yang (mungkin) menyebabkan kesalahpahaman tersebut.</p>
 
-            <p>Ada alasan lain yang membuatnya penakut dan menyebabkan dia kesulitan berbicara dengan jelas. Ketidakmampuannya untuk menyampaikan perasaan dan niatnya dengan tepat menyebabkan banyak kesalahpahaman, yang akhirnya mempengaruhi hubungannya dengan teman masa kecilnya. TAMAT!</p>
-            <!-- <button id="translateButton">Translate to Indonesia.</button>
-        
-            <div id="translatedText" style="display:none; margin-top: 20px;">
-                <p>Di sebuah desa kecil, dua anak lima tahun, seorang anak laki-laki dan seorang anak perempuan, menghabiskan hari-hari mereka bermain bersama. Mereka tertawa, berlarian, dan membangun kenangan yang tak terlupakan. Namun kebahagiaan mereka berubah ketika si gadis harus pindah ke luar negeri bersama keluarganya. Sebelum pergi, dia menyadari bahwa dia memiliki perasaan terhadap teman masa kecilnya, tetapi tidak pernah mendapat kesempatan untuk mengungkapkannya.</p>
-        
-                <p>Sementara itu, si anak laki-laki merindukannya setiap hari. Dia mencoba berbagai cara untuk menghubunginya, dan setelah delapan tahun yang panjang, akhirnya dia berhasil. Ketika mereka terhubung kembali, mereka berjanji untuk menunggu satu sama lain, apapun yang terjadi.</p>
-        
-                <p>Namun, hidup tidak selalu baik. Seiring waktu, anak laki-laki itu berubah. Sebuah peristiwa besar dalam hidupnya membuatnya takut dan meninggalkan kecemasan. Dia menjadi introvert, sering bingung ketika menghadapi situasi sosial. Setelah lulus dari sekolah menengah, seorang gadis lain mengungkapkan perasaannya kepadanya. Gadis ini kebetulan tahu tentang teman masa kecilnya dan mengambil inisiatif untuk menghubunginya. Tak lama setelah itu, dia menerima surat dari teman masa kecilnya—surat yang mengungkapkan perasaan gadis itu. Namun karena kecemasannya, dia berpura-pura tidak pernah melihat isinya.</p>
-        
-                <p>Kebingungannya semakin dalam. Dia memilih untuk diam dan mengabaikan gadis yang telah mengungkapkan perasaannya. Suatu hari, dia melakukan kesalahan besar. Ketika mencoba menghubungi teman masa kecilnya, Ketika dia bertanya, "Apakah kamu sedang berkencan dengannya?"—merujuk pada gadis yang mengungkapkan perasaannya kepadanya—dia tidak bisa menjawab. Diamnya menyebabkan teman masa kecilnya salah paham, percaya bahwa dia benar-benar dalam hubungan dengan gadis itu.</p>
-        
-                <p>Seiring berjalannya waktu, keluarganya menghadapi krisis besar, memaksanya untuk pindah ke kota lain dan memutuskan hubungan dengan semua orang, termasuk teman masa kecilnya. Beberapa tahun kemudian, dia mencoba menghubunginya lagi, berharap untuk mengonfirmasi apakah janji mereka masih berlaku. Namun saat itu, teman masa kecilnya terlalu kecewa dan dia bingung lalu diam dan tidak berani memberikan penjelasan.</p>
-        
-                <p>Dengan setiap hari yang berlalu, penyesalannya semakin dalam. Dia sangat ingin menjelaskan semuanya dari awal, tetapi tertahan oleh rasa takut—takut karena dirinya tidak pantas dengan dia karena keluarga nya yang bermasalah. Pada akhirnya, anak laki-laki itu hidup dalam kesendirian, terperangkap dalam kenangan yang tidak pernah bisa dia lepaskan.</p>
+                <p>Ada alasan lain yang membuatnya penakut dan menyebabkan dia kesulitan berbicara dengan jelas. Ketidakmampuannya untuk menyampaikan perasaan dan niatnya dengan tepat menyebabkan banyak kesalahpahaman, yang akhirnya mempengaruhi hubungannya dengan teman masa kecilnya. TAMAT?</p>
+                <!-- <button id="translateButton">Translate to Indonesia.</button>
+            
+                <div id="translatedText" style="display:none; margin-top: 20px;">
+                    <p>Di sebuah desa kecil, dua anak lima tahun, seorang anak laki-laki dan seorang anak perempuan, menghabiskan hari-hari mereka bermain bersama. Mereka tertawa, berlarian, dan membangun kenangan yang tak terlupakan. Namun kebahagiaan mereka berubah ketika si gadis harus pindah ke luar negeri bersama keluarganya. Sebelum pergi, dia menyadari bahwa dia memiliki perasaan terhadap teman masa kecilnya, tetapi tidak pernah mendapat kesempatan untuk mengungkapkannya.</p>
+            
+                    <p>Sementara itu, si anak laki-laki merindukannya setiap hari. Dia mencoba berbagai cara untuk menghubunginya, dan setelah delapan tahun yang panjang, akhirnya dia berhasil. Ketika mereka terhubung kembali, mereka berjanji untuk menunggu satu sama lain, apapun yang terjadi.</p>
+            
+                    <p>Namun, hidup tidak selalu baik. Seiring waktu, anak laki-laki itu berubah. Sebuah peristiwa besar dalam hidupnya membuatnya takut dan meninggalkan kecemasan. Dia menjadi introvert, sering bingung ketika menghadapi situasi sosial. Setelah lulus dari sekolah menengah, seorang gadis lain mengungkapkan perasaannya kepadanya. Gadis ini kebetulan tahu tentang teman masa kecilnya dan mengambil inisiatif untuk menghubunginya. Tak lama setelah itu, dia menerima surat dari teman masa kecilnya—surat yang mengungkapkan perasaan gadis itu. Namun karena kecemasannya, dia berpura-pura tidak pernah melihat isinya.</p>
+            
+                    <p>Kebingungannya semakin dalam. Dia memilih untuk diam dan mengabaikan gadis yang telah mengungkapkan perasaannya. Suatu hari, dia melakukan kesalahan besar. Ketika mencoba menghubungi teman masa kecilnya, Ketika dia bertanya, "Apakah kamu sedang berkencan dengannya?"—merujuk pada gadis yang mengungkapkan perasaannya kepadanya—dia tidak bisa menjawab. Diamnya menyebabkan teman masa kecilnya salah paham, percaya bahwa dia benar-benar dalam hubungan dengan gadis itu.</p>
+            
+                    <p>Seiring berjalannya waktu, keluarganya menghadapi krisis besar, memaksanya untuk pindah ke kota lain dan memutuskan hubungan dengan semua orang, termasuk teman masa kecilnya. Beberapa tahun kemudian, dia mencoba menghubunginya lagi, berharap untuk mengonfirmasi apakah janji mereka masih berlaku. Namun saat itu, teman masa kecilnya terlalu kecewa dan dia bingung lalu diam dan tidak berani memberikan penjelasan.</p>
+            
+                    <p>Dengan setiap hari yang berlalu, penyesalannya semakin dalam. Dia sangat ingin menjelaskan semuanya dari awal, tetapi tertahan oleh rasa takut—takut karena dirinya tidak pantas dengan dia karena keluarga nya yang bermasalah. Pada akhirnya, anak laki-laki itu hidup dalam kesendirian, terperangkap dalam kenangan yang tidak pernah bisa dia lepaskan.</p>
 
-                <p>Namun, di dalam hatinya, anak laki-laki itu terus berharap agar dirinya sembuh dari penyakit yang menghalanginya untuk berbicara dengan jelas. Dia berharap suatu hari nanti, teman masa kecilnya akan menghubunginya lagi. Ketika itu terjadi, dia berjanji akan menjelaskan semuanya dari awal dan melawan penyakit yang (mungkin) menyebabkan kesalahpahaman tersebut.</p>
+                    <p>Namun, di dalam hatinya, anak laki-laki itu terus berharap agar dirinya sembuh dari penyakit yang menghalanginya untuk berbicara dengan jelas. Dia berharap suatu hari nanti, teman masa kecilnya akan menghubunginya lagi. Ketika itu terjadi, dia berjanji akan menjelaskan semuanya dari awal dan melawan penyakit yang (mungkin) menyebabkan kesalahpahaman tersebut.</p>
 
-                <p>Kesimpulannya, anak laki-laki itu mengidap penyakit yang membuatnya penakut dan menyebabkan dia kesulitan berbicara dengan jelas. Ketidakmampuannya untuk menyampaikan perasaan dan niatnya dengan tepat menyebabkan banyak kesalahpahaman, yang akhirnya mempengaruhi hubungannya dengan teman masa kecilnya.</p>
+                    <p>Kesimpulannya, anak laki-laki itu mengidap penyakit yang membuatnya penakut dan menyebabkan dia kesulitan berbicara dengan jelas. Ketidakmampuannya untuk menyampaikan perasaan dan niatnya dengan tepat menyebabkan banyak kesalahpahaman, yang akhirnya mempengaruhi hubungannya dengan teman masa kecilnya.</p>
+                </div>
+            </div> -->
+            <span class="sok">- created by @blueskyzii.</span>
+            </div>            
+            
+            </section>
+            <div class="akhir-blog">
+                <h2>But, Who Cares? :(</h2>
+                <p>Ini cuma blog biasa. Ini benar-benar hanya blog biasa.. iya kan?</p>
+                <div class="button-container">
+                    <button onclick="showOverlay()">if you care..</button>
+                </div>
+                
+                <div id="confess">
+                    <div id="confess-box">
+                        <h2>Sorry.. Maya.</h2>
+                        <p>I've always loved you. Masalah yang kuhadapi adalah aku gak bisa mengucapkannya dengan benar. Aku minta maaf apa yang aku perbuat selama ini. Alasan aku gak  bisa mengucapkannya dengan benar adalah karena kondisiku yang dulu yang membuatku berpikir aku tidak pantas dan entah apa yang aku pikirkan  dulu membuang kesempatan ku begitu saja.</p>
+                        <p>Dulu keluarga ku saat awal masalahnya muncul itu yang membuatku 'trauma' yang tidak  bisa berinteraksi sosial, berpikir jernih, dan ngomong dengan jelas benar saja tidak bisa. Bahkan pernah ditertawakan juga karena ngomong belepotan tidak jelas.</p>
+                        <p>Alasanku tidak membalas chatmu yang terakhir itu karena aku takut kamu kecewa denganku atau hal lain.. seperti keluarga ku yang masalahnya sangat besar di Sukorejo sana.</p>
+                        <p>Jujur aku bener bener bingung cara menghadapi situasi seperti ini. Aku bersumpah demi apapun short story itulah yang aku alami dan aku perjelas disini juga, Kalau tidak percaya... itu hak mu.. Aku cuma ingin minta maaf karena aku selalu dihantui sifat sifat burukku yang menghambatku.</p>
+                        <p>Last.. I swear on my life that I've never made you a second choice.</p>
+                        <button onclick="closeConfess()">Close</button>
+                    </div>
+                </div>
             </div>
-        </div> -->
-        <span class="sok">- created by AI.</span>
-        </div>            
-        
-        </section>
-        <div class="akhir-blog">
-            <h2>But, Who Cares?</h2>
-            <p>Ini cuma blog sampah yang tidak ada "Makna" spesial atau untuk orang tertentu. Ini benar-benar hanya blog biasa.</p>
+            <section class="newsletter">
+                <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
+                <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
+                    <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
         </div>
-        <section class="newsletter">
-            <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
-            <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
-                <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
-                <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </section>
     <script src="script.js"></script>
 </body>
 </html>

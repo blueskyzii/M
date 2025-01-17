@@ -67,20 +67,26 @@ body {
     margin: 0 15px 20px 15px;
     text-align: justify;
 }
-button {
-    margin-top: 10px;
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Mengatur tombol di tengah horizontal */
+    align-items: center;     /* Mengatur tombol di tengah vertikal */
+}
+.button-container button {
+    margin: 0 20px 20px 20px;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
+    background-color: #666;
     color: white;
-    background-color: #a3a08f;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
+.button-container  button:hover {
+    background-color: #949494;
+  }
 
-button:hover {
-    background-color: #0056b3;
-}
 .hidden {
     display: none;
 }
@@ -323,7 +329,7 @@ nav div {
         width: 90%;
     }
     .motivation {
-        font-size: 16px;
+        font-size: 12px;
     }
     .isi-blog h2 {
         font-size: 24px;
@@ -385,56 +391,91 @@ a {
     color: white;
 }
 
-button {
-    position: relative;
-    left: 20%;
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  #auth-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #auth-box h2 {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin: 10px -10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+
+  #content {
+    display: block;
+  }
+
+#confess {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-        /* Style untuk Notifikasi Pop-up */
-        .notification-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #f0f0f0;
-            color: #333;
-            font-family: 'Open Sans', sans-serif;
-            padding: 20px 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 16px;
-            width: 300px;
-            opacity: 0;
-            visibility: hidden;
-            text-align: center;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
+#confess-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-        .notification-popup.show {
-            opacity: 1;
-            visibility: visible;
-        }
+#confess-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
-        .notification-popup .icon {
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-        .notification-popup .message {
-            margin-bottom: 20px;
-        }
-
-        .notification-popup .button {
-            background-color: #3d5afe;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 15px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s;
-        }
-
-        .notification-popup .button:hover {
-            background-color: #1a3bdb;
-        }
+.confess-box p {
+    font-style: normal;
+}
