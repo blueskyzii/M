@@ -48,6 +48,7 @@ function stringToBinary(str) {
     if (inputBinary === correctPasswordBinary) {
       overlay.style.display = "none"; // Hide the overlay
       confess.style.display = "flex"; // Show the content
+      document.getElementById('story').style.display = 'block';
     } else {
       error.textContent = "Salah (pastikan huruf besar semua atau bukan kamu orangnya).";
     }
@@ -59,4 +60,14 @@ function showOverlay() {
 
 function closeConfess() {
     document.getElementById('confess').style.display = 'none';
+}
+
+function clickHome() {
+  document.getElementById('home').style.display = 'block';
+  document.getElementById('gallery').style.display = 'none';
+}
+
+function clickGallery() {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('gallery').style.display = 'block';
 }

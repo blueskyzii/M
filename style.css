@@ -97,7 +97,7 @@ body {
 /* Hamburger Button */
 .hamburger {
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 20px;
     z-index: 1000;
     cursor: pointer;
@@ -202,6 +202,25 @@ header h1 {
     font-size: 40px;
     margin: 0;
 }
+.tab-buttons {
+    display: flex;
+    gap: 30px;
+}
+.tab-buttons button {
+    margin: 0 0 0 28%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #a3a08f;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+.tab-buttons button:hover {
+    background-color: #a3a08f;
+    color: #c9c9c9;
+}
+
 nav a {
     margin: 0 15px;
     text-decoration: none;
@@ -317,6 +336,9 @@ nav div {
     header {
         flex-direction: column;
         text-align: center;
+    }
+    .tab-buttons button {
+        margin: 0 0 0 14%;
     }
     nav {
         margin-top: 10px;
@@ -445,10 +467,6 @@ a {
     margin-top: 10px;
   }
 
-  #content {
-    display: block;
-  }
-
 #confess {
     position: fixed;
     top: 0;
@@ -478,4 +496,20 @@ a {
 
 .confess-box p {
     font-style: normal;
+}
+
+#content {
+    display: block;
+}
+
+#home {
+    display: block;
+}
+
+#gallery {
+    display: none;
+}
+
+#story {
+    display: none;
 }
