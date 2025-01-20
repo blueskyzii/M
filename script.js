@@ -50,7 +50,7 @@ function stringToBinary(str) {
       confess.style.display = "flex"; // Show the content
       document.getElementById('story').style.display = 'block';
     } else {
-      error.textContent = "Salah (pastikan huruf besar semua atau bukan kamu orangnya).";
+      error.textContent = "Salah (pastikan huruf besar semua atau is not you maybe).";
     }
 }
 
@@ -71,6 +71,10 @@ function switchTab(tabElement, tabName, callback) {
 
 function showOverlay() {
     document.getElementById('overlay').style.display = 'flex';
+}
+
+function closeOverlay() {
+  document.getElementById('overlay').style.display = 'none';
 }
 
 function closeConfess() {
