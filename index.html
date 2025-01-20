@@ -28,11 +28,11 @@
                     <div></div>
                 </div>
                 <h1>Personal Blog</h1>
-                <div class="tab-buttons">
-                    <button onclick="clickHome()">Home</button>
-                    <button onclick="clickGallery()">Gallery</button>
-                </div>
             </header>
+            <div class="tab-container">
+                <button class="tab active"  onclick="switchTab(this, 'home', clickHome)">Home</button>
+                <button class="tab" onclick="switchTab(this, 'gallery', clickGallery)">Gallery</button>
+            </div>
             
             <!-- Overlay -->
             <div class="overlay" onclick="toggleMenu()"></div>
@@ -63,7 +63,7 @@
             </div>
         <div id="home">
             <div class="isi-blog">
-                <h2>WELCOME.</h2>
+                <h1>WELCOME</h1>
                 <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
                 <img src="setup.jpg" alt="">
                 <h2>Produktif.</h2>
@@ -112,24 +112,26 @@
                     </div>
                 </div>
             </div>
-            <section class="newsletter">
-                <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
-                <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
-                    <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
-                    <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </section>
         </div>
     </div>
     <div id="gallery">
-        <div class="isi-blog">
-            <h2>My Gallery.</h2>
-            <img src="setup.jpg" alt="">
+        <div class="gallery">
+            <h1>MY GALLERY</h1>
+            <h2>Game</h2>
+            <img src="genhin.jpg" alt="Journey">
+            <img src="profile.png" alt="Profile">
         </div>
     </div>
+    <section class="newsletter">
+        <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
+        <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
+            <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

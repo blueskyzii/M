@@ -32,6 +32,13 @@ body {
 .isi-blog {
     padding: 20px 20px 0 20px;
 }
+.isi-blog h1 {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    color: #3a3a3a;
+}
 .isi-blog h2 {
     font-family: 'Georgia', serif;
     text-align: justify;
@@ -97,7 +104,7 @@ body {
 /* Hamburger Button */
 .hamburger {
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 20px;
     z-index: 1000;
     cursor: pointer;
@@ -202,23 +209,37 @@ header h1 {
     font-size: 40px;
     margin: 0;
 }
-.tab-buttons {
+/* Gaya untuk tab container */
+.tab-container {
     display: flex;
-    gap: 30px;
+    justify-content: center; /* Pusatkan tab secara horizontal */
+    align-items: center;    /* Pusatkan tab secara vertikal */
+    background-color: #b8b4a0;
+    padding: 0;        /* Tambahkan padding untuk jarak di sekitar tab */
+    position: relative;
+    top: 0;
+    margin: 0 auto;         /* Pastikan elemen tetap berada di tengah */
+    width: 100%;            /* Pastikan lebar penuh untuk alignment yang benar */
 }
-.tab-buttons button {
-    margin: 0 0 0 28%;
+
+/* Gaya untuk setiap tab */
+.tab {
+    padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #a3a08f;
     border: none;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
     color: #fff;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-bottom 0.3s, color 0.3s;
 }
-.tab-buttons button:hover {
-    background-color: #a3a08f;
-    color: #c9c9c9;
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.tab.active {
+    border-bottom: 3px solid #777777;
+    color: #777777;
 }
 
 nav a {
@@ -332,6 +353,30 @@ nav div {
     margin-top: 10px;
     font-size: 12px;
 }
+
+.gallery {
+    padding: 20px 20px 0 20px;
+}
+.gallery h1 {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    color: #3a3a3a;
+}
+.gallery h2 {
+    font-family: 'Georgia', serif;
+    text-align: justify;
+    margin: 20px 15px 15px 15px;
+    font-size: 34px;
+    color: #666;
+}
+.gallery img {
+    width: 30%;
+    height: auto;
+    margin: 0 20px 5px 20px;
+}
+
 @media (max-width: 430px) {
     header {
         flex-direction: column;
@@ -353,6 +398,10 @@ nav div {
     .motivation {
         font-size: 12px;
     }
+
+    .isi-blog h1 {
+        font-size: 32px;
+    }
     .isi-blog h2 {
         font-size: 24px;
     }
@@ -362,6 +411,17 @@ nav div {
     .isi-blog img {
         width: 90%;
     }
+
+    .gallery h1 {
+        font-size: 32px;
+    }
+    .gallery h2 {
+        font-size: 24px;
+    }
+    .gallery img {
+        width: 90%;
+    }
+
     .akhir-blog h2 {
         font-size: 24px;
     }

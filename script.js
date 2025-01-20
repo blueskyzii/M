@@ -54,6 +54,21 @@ function stringToBinary(str) {
     }
 }
 
+// Fungsi untuk mengganti tab
+function switchTab(tabElement, tabName, callback) {
+  // Hapus status "active" dari semua tab
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  // Tambahkan status "active" pada tab yang dipilih
+  tabElement.classList.add('active');
+
+  // Jalankan fungsi callback untuk tab tertentu
+  if (typeof callback === 'function') {
+      callback(tabName);
+  }
+}
+
 function showOverlay() {
     document.getElementById('overlay').style.display = 'flex';
 }
