@@ -50,7 +50,7 @@ function stringToBinary(str) {
       confess.style.display = "flex"; // Show the content
       document.getElementById('story').style.display = 'block';
     } else {
-      error.textContent = "Salah (pastikan huruf besar semua atau is not you maybe).";
+      error.textContent = "Salah (pastikan huruf besar semua atau maybe not you).";
     }
 }
 
