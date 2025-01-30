@@ -1,3 +1,27 @@
+function countDaysSince(targetDateStr) {
+  // Parse tanggal yang telah ditentukan (format: DD/MM/YYYY)
+  const [day, month, year] = targetDateStr.split('/').map(Number);
+  const targetDate = new Date(year, month - 1, day);
+  
+  // Ambil tanggal saat ini
+  const currentDate = new Date();
+  
+  // Hitung selisih waktu dalam milidetik
+  const timeDiff = currentDate - targetDate;
+  
+  // Konversi ke hari
+  const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  
+  // Tampilkan hasil dalam elemen HTML
+  document.getElementById("output").innerHTML = `
+      <p>Day-${daysPassed}. Waiting for you..<br>I don't know hari ke berapa tapi setidaknya aku memulai dari hari spesialmu.</p>
+  `;
+}
+
+// Contoh pemanggilan fungsi
+document.addEventListener("DOMContentLoaded", function() {
+  countDaysSince("27/12/2024");
+});
 
 
 function toggleMenu() {
@@ -37,7 +61,7 @@ function stringToBinary(str) {
     const overlay = document.getElementById("overlay");
 
     if (!input) {
-      error.textContent = "Please input your full name."; // Handle empty input
+      error.textContent = "Please input something."; // Handle empty input
       return;
     }
 
@@ -50,7 +74,7 @@ function stringToBinary(str) {
       confess.style.display = "flex"; // Show the content
       document.getElementById('story').style.display = 'block';
     } else {
-      error.textContent = "Salah (pastikan huruf besar semua atau maybe not you).";
+      error.textContent = "Salah (all caps or maybe not you).";
     }
 }
 
