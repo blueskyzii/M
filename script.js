@@ -12,7 +12,7 @@ function countDaysSince(targetDateStr) {
     const seconds = Math.floor((timeDiff / 1000) % 60);
     
     document.getElementById("output").innerHTML = `
-      <p>Waiting for you? waiting for: <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB)</p>
+      <p>Waiting for you? for: <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB)</p>
     `;
   }
 
