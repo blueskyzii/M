@@ -1,28 +1,28 @@
 function countDaysSince(targetDateStr) {
-  // Parse tanggal yang telah ditentukan (format: DD/MM/YYYY)
   const [day, month, year] = targetDateStr.split('/').map(Number);
   const targetDate = new Date(year, month - 1, day);
-  
-  // Ambil tanggal saat ini
-  const currentDate = new Date();
-  
-  // Hitung selisih waktu dalam milidetik
-  const timeDiff = currentDate - targetDate;
-  
-  // Konversi ke hari
-  const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-  
-  // Tampilkan hasil dalam elemen HTML
-  document.getElementById("output").innerHTML = `
-      <p>Day-${daysPassed}. Waiting for you..<br>I don't know hari ke berapa tapi setidaknya aku memulai dari hari spesialmu.</p>
-  `;
+
+  function updateCountdown() {
+    const currentDate = new Date();
+    const timeDiff = currentDate - targetDate;
+    
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+    const seconds = Math.floor((timeDiff / 1000) % 60);
+    
+    document.getElementById("output").innerHTML = `
+      <p>Waiting for you? waiting for: <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB)</p>
+    `;
+  }
+
+  updateCountdown(); // Update pertama kali
+  setInterval(updateCountdown, 1000); // Perbarui setiap detik
 }
 
-// Contoh pemanggilan fungsi
 document.addEventListener("DOMContentLoaded", function() {
   countDaysSince("27/12/2024");
 });
-
 
 function toggleMenu() {
     const overlay = document.querySelector('.overlay');
@@ -74,7 +74,7 @@ function stringToBinary(str) {
       confess.style.display = "flex"; // Show the content
       document.getElementById('story').style.display = 'block';
     } else {
-      error.textContent = "Salah (all caps or maybe.. wrong person?).";
+      error.textContent = "failed, wrong person?";
     }
 }
 
@@ -101,8 +101,13 @@ function closeOverlay() {
   document.getElementById('overlay').style.display = 'none';
 }
 
+function showHBD() {
+  document.getElementById('hbd').style.display = 'flex';
+  document.getElementById('confess').style.display = 'none';
+}
+
 function closeConfess() {
-    document.getElementById('confess').style.display = 'none';
+    document.getElementById('hbd').style.display = 'none';
 }
 
 function clickHome() {
