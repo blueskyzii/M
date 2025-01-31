@@ -74,7 +74,7 @@ function stringToBinary(str) {
       confess.style.display = "flex"; // Show the content
       document.getElementById('story').style.display = 'block';
     } else {
-      error.textContent = "Salah (all caps or maybe wrong person).";
+      error.textContent = "Salah (all caps or maybe.. wrong person?).";
     }
 }
 
