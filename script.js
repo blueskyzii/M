@@ -12,7 +12,7 @@ function countDaysSince(targetDateStr) {
     const seconds = Math.floor((timeDiff / 1000) % 60);
     
     document.getElementById("output").innerHTML = `
-      <p>Waiting for you? for: <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB)</p>
+      <p>Waiting for what? for: <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB)</p>
     `;
   }
 
@@ -44,7 +44,7 @@ function toggleText() {
     }
 }
 
-// Convert string to binary
+// Convert to binary
 function stringToBinary(str) {
     let binaryString = '';
     for (let i = 0; i < str.length; i++) {

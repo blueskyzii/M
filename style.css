@@ -19,7 +19,19 @@ body {
     font-weight: bold;
     color: #666;
     font-size: 14px;
-    text-align: justify; /* Justify text to align both left and right */
+    text-align: justify;
+}
+
+.blog-box {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-top: 15px;
+    margin: -10px 20px 5px 20px;
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+    text-align: justify;
 }
 
 .motivation {
@@ -77,8 +89,8 @@ body {
 
 .button-container {
     display: flex;
-    justify-content: center; /* Mengatur tombol di tengah horizontal */
-    align-items: center;     /* Mengatur tombol di tengah vertikal */
+    justify-content: center;
+    align-items: center;
 }
 .button-container button {
     margin: 0 20px 20px 20px;
@@ -101,7 +113,7 @@ body {
 .more-text {
     color: #555;
 }
-/* Hamburger Button */
+
 .hamburger {
     position: absolute;
     top: 30px;
@@ -118,7 +130,6 @@ body {
     transition: 0.3s;
 }
 
-/* Overlay (dim the main content) */
 .overlay {
     position: fixed;
     top: 0;
@@ -185,9 +196,9 @@ body {
     font-weight: bold;
     color: #666;
     font-size: 14px;
-    text-align: justify; /* Justify text to align both left and right */
+    text-align: justify;
 }
-/* Active states */
+
 .overlay.active {
     opacity: 1;
     visibility: visible;
@@ -209,20 +220,19 @@ header h1 {
     font-size: 40px;
     margin: 0;
 }
-/* Gaya untuk tab container */
+
 .tab-container {
     display: flex;
-    justify-content: center; /* Pusatkan tab secara horizontal */
-    align-items: center;    /* Pusatkan tab secara vertikal */
+    justify-content: center;
+    align-items: center;
     background-color: #b8b4a0;
-    padding: 0;        /* Tambahkan padding untuk jarak di sekitar tab */
+    padding: 0;
     position: relative;
     top: 0;
-    margin: 0 auto;         /* Pastikan elemen tetap berada di tengah */
-    width: 100%;            /* Pastikan lebar penuh untuk alignment yang benar */
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* Gaya untuk setiap tab */
 .tab {
     padding: 10px 20px;
     font-size: 16px;
@@ -304,11 +314,6 @@ nav div {
     width: 100%;
     height: auto;
 }
-.sketchfab-embed-wrapper {
-    margin: 0 20px;
-    width: 100%;
-    height: auto;
-}
 .post p {
     margin: 10px 0 0;
     font-weight: 600;
@@ -367,13 +372,17 @@ nav div {
 .gallery h2 {
     font-family: 'Georgia', serif;
     text-align: justify;
-    margin: 20px 15px 15px 15px;
+    margin: 20px 15px 5px 15px;
     font-size: 34px;
     color: #666;
 }
 .gallery img {
     width: 30%;
     height: auto;
+    margin: 0 20px 5px 20px;
+}
+
+.gallery p {
     margin: 0 20px 5px 20px;
 }
 
