@@ -70,6 +70,65 @@ function stringToBinary(str) {
 
     // Compare binary input with binary correct password
     if (inputBinary === correctPasswordBinary) {
+      let side = document.getElementById("side");
+
+      if (side) {
+        side.style.backgroundColor = "#252525";
+      }
+
+      const elements = {
+        bawah: "#121212",
+        tab: "#1e1e1e",
+        header: "#121212"
+      };
+      
+      Object.entries(elements).forEach(([id, color]) => {
+          let element = document.getElementById(id);
+          if (element) {
+              element.style.backgroundColor = color;
+          }
+      });
+      
+      document.querySelectorAll('#a1').forEach(element => {
+        element.style.color = "#e0e0e0";
+      })
+
+      document.querySelectorAll('#box').forEach(element => {
+        element.style.backgroundColor = "#252525";
+        element.style.color = "#e0e0e0";
+      })
+
+      document.querySelectorAll('#warna').forEach(element => {
+        element.style.color = "#e0e0e0";
+      });
+
+      // Mengubah warna latar belakang untuk elemen-elemen yang membutuhkan
+      const bgElements = ['#story', '#confess-box', '#badan'];
+      bgElements.forEach(selector => {
+        let element = document.querySelector(selector);
+        if (element) {
+            element.style.backgroundColor = "#252525";
+            element.style.color = "#e0e0e0";
+        }
+      });
+
+      // Sembunyikan button-container jika ada
+      const button = document.getElementById('button-container');
+      if (button) button.style.display = 'none';
+
+      // Mengubah warna teks untuk elemen dengan ID tertentu
+      const textElements = ['#font0', '#font1', '#font2', '#font3', '#font4'];
+      textElements.forEach(selector => {
+        let element = document.querySelector(selector);
+        if (element) {
+            element.style.color = "#e0e0e0";
+        }
+      });
+
+      // Mulai memainkan musik
+      playMusic();
+
+
       overlay.style.display = "none"; // Hide the overlay
       confess.style.display = "flex"; // Show the content
       document.getElementById('story').style.display = 'block';
@@ -94,7 +153,7 @@ function switchTab(tabElement, tabName, callback) {
 }
 
 function showOverlay() {
-    document.getElementById('overlay').style.display = 'flex';
+  document.getElementById('overlay').style.display = 'flex';
 }
 
 function closeOverlay() {
@@ -102,9 +161,22 @@ function closeOverlay() {
 }
 
 function showHBD() {
-  playMusic();
-  document.getElementById('hbd').style.display = 'flex';
-  document.getElementById('confess').style.display = 'none';
+  let hbdBox = document.getElementById('hbd-box');
+  let hbd = document.getElementById('hbd');
+  let confess = document.getElementById('confess');
+
+  if (hbd) {
+    hbd.style.display = 'flex';
+  }
+
+  if (hbdBox) {
+    hbdBox.style.backgroundColor = "#252525 ";
+    hbdBox.style.color = "#e0e0e0";
+  }
+
+  if (confess) {
+      confess.style.display = 'none';
+  }
 }
 
 function closeConfess() {

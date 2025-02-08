@@ -17,27 +17,17 @@
     </head>
 </head>
 <body>
-    <body>
-        <div id="overlay">
-            <div id="auth-box">
-                <h2>Just Try it</h2>
-                <p>Try input something with all caps</p>
-                <input type="text" id="password">
-                <button onclick="checkPassword()">Submit</button>
-                <!-- <button onclick="closeOverlay()">Close</button> -->
-                <p id="error" class="error"></p>
-            </div>
-        </div>
+    <body id="badan">
         <div id="content">
-            <header>
-                <div class="hamburger" onclick="toggleMenu()">
+            <header id="header">
+                <div id="a1" class="hamburger" onclick="toggleMenu()">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
                 <h1>Personal Blog</h1>
             </header>
-            <div class="tab-container">
+            <div id="tab" class="tab-container">
                 <button class="tab active"  onclick="switchTab(this, 'home', clickHome)">Home</button>
                 <button class="tab" onclick="switchTab(this, 'gallery', clickGallery)">Gallery</button>
             </div>
@@ -46,24 +36,24 @@
             <div class="overlay" onclick="toggleMenu()"></div>
         
             <!-- Side Panel -->
-            <div class="side-panel">
-                <h2>My Profile</h2>
-                <div class="side-text-box">
-                <p><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
+            <div id="side" class="side-panel">
+                <h2 id="warna">My Profile</h2>
+                <div id="box" class="side-text-box">
+                <p id="warna"><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
                     <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
                     <i class="fas fa-heart"></i> Fav Girl 4d617961<br>
                     <i class="fas fa-lock icon"></i> My birth date is x4-0x-200x</p>
                     <p class="more-text hidden">“Translate:</p>
                 </div>
-                <img src="img/images.jpeg" alt="">
-                <span>NB: sorry I lost the original photo.</span>
-                <div class="side-social">
-                    <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
-                    <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
-                    <a href="https://tiktok.com/blueskyzii"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/6285182012498"><i class="fas fa-comments"></i></a>
+                <img src="img/moon.jpg" alt="">
+                <span id="warna">NB: sorry I lost the original photo.</span>
+                <div id="warna" class="side-social">
+                    <a href="https://www.facebook.com/profile.php?id=100070356891708" id="a1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/users/1211886368565895221" id="a1"><i class="fab fa-discord"></i></a>
+                    <a href="https://tiktok.com/blueskyzii" id="a1"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/6285182012498" id="a1"><i class="fas fa-comments"></i></a>
                 </div>
             </div>
             <div class="motivation">
@@ -71,17 +61,17 @@
             </div>
         <div id="home">
             <div class="isi-blog">
-                <h1>WELCOME</h1>
+                <h1 id="font0">WELCOME</h1>
                 <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
                 <img src="img/setup.jpg" alt="">
-                <h2>Produktif.</h2>
+                <h2 id="font1">Produktif.</h2>
                 <p>Terkadang, kita merasa lelah dan terbebani dengan banyaknya hal yang harus dilakukan. Malas datang menghampiri, dan rasanya semua yang ingin kita capai terasa begitu jauh. Namun, ingatlah bahwa setiap langkah kecil yang kita ambil hari ini adalah bagian dari perjalanan besar yang sedang kita jalani. Rasa malas memang wajar, tapi jangan biarkan itu menghalangi impianmu. Setiap detik yang kita sia-siakan tidak akan kembali, sementara waktu terus berjalan, membawa kita lebih dekat atau lebih jauh dari tujuan kita. Cobalah untuk bangkit, walau hanya sedikit demi sedikit. Lakukan sesuatu, bahkan jika itu terasa kecil, karena terkadang kemajuan terbesar dimulai dari langkah yang tampak paling kecil. Percayalah, keberhasilan bukanlah tentang menghindari rasa malas, tetapi tentang terus maju meski kadang kita merasa tidak ingin melangkah. Tetap produktif, tetap berusaha, dan lihatlah bagaimana setiap usaha akan membuahkan hasil yang tak terduga.</p>
-                <h2>Dunia Digital dalam Kata</h2>
+                <h2 id="font2">Dunia Digital dalam Kata</h2>
                 <p>Perjalanan coding-ku dimulai sejak kelas 1 SMP, saat pertama kali mengenal dunia scripting di game Growtopia. Waktu itu, aku belajar membuat script untuk autofarm, meskipun hanya memahami dasar-dasarnya. Dari situ, aku mulai tertarik dengan coding dan mencoba memahami logika sebuah code. <br><br>Selain scripting di Growtopia, aku juga belajar dasar-dasar HTML dan CSS (JS pke AI hehehe), mencoba membuat halaman web sederhana dengan sedikit style. Meskipun belum terlalu mendalam, aku tetap menikmati prosesnya. Coding bukan hanya soal menulis kode, tapi juga memahami logika di baliknya.</p>
-                <h2>Belajar darimana?</h2>
+                <h2 id="font3">Belajar darimana?</h2>
                 <p>Semua yang aku pelajari tentang coding berasal dari otodidak. Aku nggak pernah ikut kursus atau belajar secara formal, tapi rasa penasaran selalu membuatku ingin mencoba hal baru. Internet jadi sumber utama—mulai dari membaca dokumentasi, menonton tutorial, hingga mencari solusi saat menemui error.</p>
                 <p>Selain belajar sendiri, komunitas di Discord juga banyak membantu. Bergabung dengan komunitas coding dan game scripting membuatku lebih mudah bertanya ketika menemui kesulitan. Dari sana, aku juga belajar cara berpikir lebih sistematis dan memahami berbagai trik yang nggak selalu ada di tutorial biasa.</p>
-                <div class="blog-box">
+                <div id="box" class="blog-box">
                     <p>"Awalnya aku gabung di server Discord cuma buat lihat-lihat, tapi ternyata banyak orang yang share ilmu. Pernah suatu kali aku stuck di error aneh, terus ada yang bantu jelasin dengan cara yang simpel banget. Dari situ, aku jadi makin sering aktif."</p>
                 </div>
                 <p>Meskipun prosesnya nggak selalu mudah, belajar coding dengan cara ini terasa lebih fleksibel dan menyenangkan. Aku mungkin belum menguasai banyak, tapi dengan terus mencoba dan bertanya, aku percaya akan selalu ada hal baru yang bisa dipelajari.</p>
@@ -105,9 +95,9 @@
             
             </section>
             <div class="akhir-blog">
-                <h2>Who Cares?</h2>
+                <h2 id="font4">Who Cares?</h2>
                 <p>Ini cuma blog biasa. Ini benar-benar hanya blog biasa.. iya kan?</p>
-                <div class="button-container">
+                <div id="button-container" class="button-container">
                     <button onclick="showOverlay()">YES</button>
                 </div>
                 
@@ -128,6 +118,17 @@
                     </div>
                 </div>
 
+                <div id="overlay">
+                    <div id="auth-box">
+                        <h2>Just Try it</h2>
+                        <p>Try input something with all caps</p>
+                        <input type="text" id="password">
+                        <button onclick="checkPassword()">Submit</button>
+                        <!-- <button onclick="closeOverlay()">Close</button> -->
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+
                 <div id="hbd">
                     <div id="hbd-box">
                         <h2>Last..</h2>
@@ -140,26 +141,26 @@
     </div>
     <div id="gallery">
         <div class="gallery">
-            <h1>Captured Moments.</h1>
-            <h2>Photo by me</h2>
+            <h1 id="warna">Captured Moments.</h1>
+            <h2 id="warna">Photo by me</h2>
             <img src="img/me 1.jpg" alt="Photo by me">
             <img src="img/moon.png" alt="Photo by me">
-            <h2>Random :3</h2>
+            <h2 id="warna">Random :3</h2>
             <img src="img/ml.jpg" alt="Random">
             <img src="img/hutao.png" alt="Random">
             <img src="img/mbr.jpg" alt="Random">
-            <h2>Me</h2>
-            <p>Coming Soon..</p>
+            <h2 id="warna">Me</h2>
+            <p id="warna">Coming Soon..</p>
         </div>
     </div>
-    <section class="newsletter">
+    <section id="bawah" class="newsletter">
         <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
         <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100070356891708"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/blueskyzii"><i class="fab fa-instagram"></i></a>
-            <a href="https://discord.com/users/1211886368565895221"><i class="fab fa-discord"></i></a>
-            <a href="mailto:alzidanirafa.01@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100070356891708" id="a1"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.com/users/1211886368565895221" id="a1"><i class="fab fa-discord"></i></a>
+            <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
     <script src="script.js"></script>

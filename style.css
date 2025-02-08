@@ -130,6 +130,10 @@ body {
     transition: 0.3s;
 }
 
+/* header {
+ color: #535353;
+} */
+
 .overlay {
     position: fixed;
     top: 0;
@@ -531,9 +535,10 @@ a {
     background-color: #0056b3;
   }
 
-  .error {
-    color: red;
+  #error {
+    text-align: center;
     margin-top: 10px;
+    color: red;
   }
 
 #confess {
