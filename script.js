@@ -12,7 +12,7 @@ function countDaysSince(targetDateStr) {
     const seconds = Math.floor((timeDiff / 1000) % 60);
     
     document.getElementById("output").innerHTML = `
-      <p>Waiting for <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB) Aslinya udah lama cuma ku pas-in sama hari spesialmu.</p>
+      <p>I've been waiting for <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB), but the truth is, I've been waiting far longer—I just matched it to your special day.</p>
     `;
   }
 
@@ -128,9 +128,12 @@ function stringToBinary(str) {
       // Mulai memainkan musik
       playMusic();
 
-
+      
       overlay.style.display = "none"; // Hide the overlay
       confess.style.display = "flex"; // Show the content
+
+      document.getElementById('motivasiAwal').style.display = 'none';
+      document.getElementById('mAkhir').style.display = 'block';
       document.getElementById('story').style.display = 'block';
     } else {
       error.textContent = "failed, wrong person?";
@@ -195,5 +198,61 @@ function clickGallery() {
 
 function playMusic() {
   var audio = document.getElementById("myAudio");
+  audio.currentTime = 25; // Mulai dari detik ke-30
   audio.play();
+}
+
+function toggleDarkMode() {
+  let isDarkMode = document.body.classList.toggle("dark-mode");
+  let side = document.getElementById("side");
+  
+  if (side) {
+      side.style.backgroundColor = isDarkMode ? "#252525" : "";
+  }
+
+  const elements = {
+      bawah: "#121212",
+      tab: "#1e1e1e",
+      header: "#121212"
+  };
+
+  Object.entries(elements).forEach(([id, color]) => {
+      let element = document.getElementById(id);
+      if (element) {
+          element.style.backgroundColor = isDarkMode ? color : "";
+      }
+  });
+
+  document.querySelectorAll('#a1').forEach(element => {
+      element.style.color = isDarkMode ? "#e0e0e0" : "";
+  });
+
+  document.querySelectorAll('#box').forEach(element => {
+      element.style.backgroundColor = isDarkMode ? "#252525" : "";
+      element.style.color = isDarkMode ? "#e0e0e0" : "";
+  });
+
+  document.querySelectorAll('#warna').forEach(element => {
+      element.style.color = isDarkMode ? "#e0e0e0" : "";
+  });
+
+  const bgElements = ['#story', '#confess-box', '#badan'];
+  bgElements.forEach(selector => {
+      let element = document.querySelector(selector);
+      if (element) {
+          element.style.backgroundColor = isDarkMode ? "#252525" : "";
+          element.style.color = isDarkMode ? "#e0e0e0" : "";
+      }
+  });
+
+  const button = document.getElementById('button-container');
+  if (button) button.style.display = isDarkMode ? 'none' : '';
+
+  const textElements = ['#font0', '#font1', '#font2', '#font3', '#font4'];
+  textElements.forEach(selector => {
+      let element = document.querySelector(selector);
+      if (element) {
+          element.style.color = isDarkMode ? "#e0e0e0" : "";
+      }
+  });
 }
