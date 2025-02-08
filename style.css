@@ -609,3 +609,36 @@ a {
 #story {
     display: none;
 }
+
+.heart {
+    position: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #e57373;
+    transform: rotate(-45deg);
+    animation: pulse 2s infinite;
+}
+.heart:before, .heart:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #e57373;
+    border-radius: 50%;
+}
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+}

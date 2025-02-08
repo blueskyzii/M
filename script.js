@@ -12,7 +12,7 @@ function countDaysSince(targetDateStr) {
     const seconds = Math.floor((timeDiff / 1000) % 60);
     
     document.getElementById("output").innerHTML = `
-      <p>Waiting for what? for: <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB)</p>
+      <p>Waiting for <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB) Aslinya udah lama cuma ku pas-in sama hari spesialmu.</p>
     `;
   }
 
@@ -102,6 +102,7 @@ function closeOverlay() {
 }
 
 function showHBD() {
+  playMusic();
   document.getElementById('hbd').style.display = 'flex';
   document.getElementById('confess').style.display = 'none';
 }
@@ -118,4 +119,9 @@ function clickHome() {
 function clickGallery() {
   document.getElementById('home').style.display = 'none';
   document.getElementById('gallery').style.display = 'block';
+}
+
+function playMusic() {
+  var audio = document.getElementById("myAudio");
+  audio.play();
 }
