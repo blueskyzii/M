@@ -659,7 +659,7 @@ a {
 .toggle-container {
     position: absolute;
     align-items: center;
-    top: 97px;
+    top: 98px;
     right: 10px;
 }
 .toggle-label {
@@ -680,7 +680,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #a3a08f;
     transition: 0.4s;
     border-radius: 25px;
 }

@@ -113,7 +113,7 @@ function stringToBinary(str) {
       });
 
       // Sembunyikan button-container jika ada
-      const button = document.getElementById('button-container');
+      const button = document.getElementById('buttonClick');
       if (button) button.style.display = 'none';
 
       // Mengubah warna teks untuk elemen dengan ID tertentu
@@ -127,8 +127,8 @@ function stringToBinary(str) {
 
       // Mulai memainkan musik
       playMusic();
+      isDarkMode = true;
 
-      
       overlay.style.display = "none"; // Hide the overlay
       confess.style.display = "flex"; // Show the content
 
@@ -225,6 +225,10 @@ function toggleDarkMode() {
 
   document.querySelectorAll('#a1').forEach(element => {
       element.style.color = isDarkMode ? "#e0e0e0" : "";
+  });
+
+  document.querySelectorAll('#hamburger').forEach(element => {
+    element.style.backgroundColor = isDarkMode ? "#e0e0e0" : "";
   });
 
   document.querySelectorAll('#box').forEach(element => {
