@@ -72,8 +72,12 @@ function stringToBinary(str) {
     if (inputBinary === correctPasswordBinary) {
       // Mulai memainkan musik
       playMusic();
-      isDarkMode = true;
+      toggleDarkMode();
       tulisHistory();
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        cekSlide(); // Panggil cekSlide setelah halaman selesai dimuat
+      });
 
       let side = document.getElementById("side");
 
@@ -267,4 +271,19 @@ function tulisHistory() {
     'event_category': 'authentication',
     'event_label': 'Login Sukses'
   });
+}
+
+function cekSlide() {
+  let toggleInput = document.querySelector(".toggle-label input");
+
+  // Fungsi untuk mengaktifkan slider berdasarkan kondisi
+  function setToggleState(state) {
+      toggleInput.checked = state;
+  }
+
+  // Contoh kondisi awal (ubah sesuai kebutuhan)
+  let kondisi = false; // Default: OFF (geser ke kiri)
+
+  // Atur toggle berdasarkan kondisi
+  setToggleState(kondisi);
 }
