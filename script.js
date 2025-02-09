@@ -70,6 +70,11 @@ function stringToBinary(str) {
 
     // Compare binary input with binary correct password
     if (inputBinary === correctPasswordBinary) {
+      // Mulai memainkan musik
+      playMusic();
+      isDarkMode = true;
+      tulisHistory();
+
       let side = document.getElementById("side");
 
       if (side) {
@@ -124,10 +129,6 @@ function stringToBinary(str) {
             element.style.color = "#e0e0e0";
         }
       });
-
-      // Mulai memainkan musik
-      playMusic();
-      isDarkMode = true;
 
       overlay.style.display = "none"; // Hide the overlay
       confess.style.display = "flex"; // Show the content
@@ -258,5 +259,12 @@ function toggleDarkMode() {
       if (element) {
           element.style.color = isDarkMode ? "#e0e0e0" : "";
       }
+  });
+}
+
+function tulisHistory() {
+  gtag('event', 'login_berhasil', {
+    'event_category': 'authentication',
+    'event_label': 'Login Sukses'
   });
 }
