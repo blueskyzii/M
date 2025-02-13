@@ -44,6 +44,9 @@ function toggleText() {
     }
 }
 
+let sudahLogin = false;
+let click
+
 // Convert to binary
 function stringToBinary(str) {
     let binaryString = '';
@@ -74,7 +77,14 @@ function stringToBinary(str) {
       playMusic();
       buttonDarkMode();
       tulisHistory();
+
+      const icon = document.getElementById("darkModeIcon");
+      const slider = document.getElementById("buttonDark");
       
+      slider.style.backgroundColor = ["rgb(30, 30, 30)", "#b8b4a0"].includes(slider.style.backgroundColor) ? "#1e1e1e" : "#b8b4a0";
+      icon.className = document.getElementById("darkModeToggle").checked ? "fas fa-eye" : "fas fa-eye-slash";
+      sudahLogin = true
+
       document.addEventListener("DOMContentLoaded", function () {
         cekSlide(); // Panggil cekSlide setelah halaman selesai dimuat
       });
@@ -213,16 +223,24 @@ function clickProject() {
 
 function playMusic() {
   var audio = document.getElementById("myAudio");
-  audio.currentTime = 25; // Mulai dari detik ke-30
+  audio.currentTime = 25;
   audio.play();
 }
 
 function buttonDarkMode() {
-  const icon = document.getElementById("darkModeIcon");
-  const slider = document.getElementById("buttonDark");
-  
-  slider.style.backgroundColor = ["rgb(30, 30, 30)", "#1e1e1e"].includes(slider.style.backgroundColor) ? "#b8b4a0" : "#1e1e1e";
-  icon.className = document.getElementById("darkModeToggle").checked ? "fas fa-eye-slash" : "fas fa-eye";
+  if (!sudahLogin) {
+    const icon = document.getElementById("darkModeIcon");
+    const slider = document.getElementById("buttonDark");
+    
+    slider.style.backgroundColor = ["rgb(30, 30, 30)", "#1e1e1e"].includes(slider.style.backgroundColor) ? "#b8b4a0" : "#1e1e1e";
+    icon.className = document.getElementById("darkModeToggle").checked ? "fas fa-eye-slash" : "fas fa-eye";
+  } else {
+    const icon = document.getElementById("darkModeIcon");
+    const slider = document.getElementById("buttonDark");
+    
+    slider.style.backgroundColor = ["rgb(30, 30, 30)", "#1e1e1e"].includes(slider.style.backgroundColor) ? "#b8b4a0" : "#1e1e1e";
+    icon.className = document.getElementById("darkModeToggle").checked ? "fas fa-eye" : "fas fa-eye-slash";
+  }
 
   let isDarkMode = document.body.classList.toggle("dark-mode");
   let side = document.getElementById("side");
