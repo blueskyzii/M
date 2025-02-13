@@ -72,7 +72,7 @@ function stringToBinary(str) {
     if (inputBinary === correctPasswordBinary) {
       // Mulai memainkan musik
       playMusic();
-      toggleDarkMode();
+      buttonDarkMode();
       tulisHistory();
       
       document.addEventListener("DOMContentLoaded", function () {
@@ -87,6 +87,7 @@ function stringToBinary(str) {
 
       const elements = {
         bawah: "#121212",
+        // buttonDark: "#1e1e1e",
         tab: "#1e1e1e",
         header: "#121212"
       };
@@ -194,11 +195,20 @@ function closeConfess() {
 function clickHome() {
   document.getElementById('home').style.display = 'block';
   document.getElementById('gallery').style.display = 'none';
+  document.getElementById('project').style.display = 'none';
 }
 
 function clickGallery() {
   document.getElementById('home').style.display = 'none';
   document.getElementById('gallery').style.display = 'block';
+  document.getElementById('project').style.display = 'none';
+}
+
+function clickProject() {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('gallery').style.display = 'none';
+  document.getElementById('project').style.display = 'block';
+  alert('ERROR 404! Coming Soon..');
 }
 
 function playMusic() {
@@ -207,7 +217,13 @@ function playMusic() {
   audio.play();
 }
 
-function toggleDarkMode() {
+function buttonDarkMode() {
+  const icon = document.getElementById("darkModeIcon");
+  const slider = document.getElementById("buttonDark");
+  
+  slider.style.backgroundColor = ["rgb(30, 30, 30)", "#1e1e1e"].includes(slider.style.backgroundColor) ? "#b8b4a0" : "#1e1e1e";
+  icon.className = document.getElementById("darkModeToggle").checked ? "fas fa-eye-slash" : "fas fa-eye";
+
   let isDarkMode = document.body.classList.toggle("dark-mode");
   let side = document.getElementById("side");
   

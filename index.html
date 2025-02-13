@@ -30,6 +30,7 @@
             <div id="tab" class="tab-container">
                 <button class="tab active"  onclick="switchTab(this, 'home', clickHome)">Home</button>
                 <button class="tab" onclick="switchTab(this, 'gallery', clickGallery)">Gallery</button>
+                <button class="tab" onclick="switchTab(this, 'project', clickProject)">Project</button>
             </div>
             
             <!-- Overlay -->
@@ -37,7 +38,7 @@
         
             <!-- Side Panel -->
             <div id="side" class="side-panel">
-                <h2 id="warna">My Profile</h2>
+                <h2 id="warna">Short Profile</h2>
                 <div id="box" class="side-text-box">
                 <p id="warna"><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
                     <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
@@ -62,8 +63,10 @@
             </div>
             <div class="toggle-container">
                 <label class="toggle-label">
-                    <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
-                    <span class="slider"></span>
+                    <input type="checkbox" id="darkModeToggle" onclick="buttonDarkMode()">
+                    <span id="buttonDark" class="slider">
+                        <i id="darkModeIcon" class="fas fa-eye"></i>
+                    </span>
                 </label>
             </div>
         <div id="home">
@@ -160,6 +163,12 @@
             <img src="img/random.jpg" alt="Random">
             <h2 id="warna">Me</h2>
             <p id="warna">Coming Soon..</p>
+        </div>
+    </div>
+    <div id="project">
+        <div class="project">
+            <!-- <h1 id="warna" class="h1-isi">Coming Soon...</h1> -->
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </div>
     <section id="bawah" class="newsletter">
