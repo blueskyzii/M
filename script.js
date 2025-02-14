@@ -84,15 +84,19 @@ function stringToBinary(str) {
       slider.style.backgroundColor = ["rgb(30, 30, 30)", "#b8b4a0"].includes(slider.style.backgroundColor) ? "#1e1e1e" : "#b8b4a0";
       icon.className = document.getElementById("darkModeToggle").checked ? "fas fa-eye" : "fas fa-eye-slash";
       sudahLogin = true
-
+      
       document.addEventListener("DOMContentLoaded", function () {
         cekSlide(); // Panggil cekSlide setelah halaman selesai dimuat
       });
-
+      
+      let hideButton = document.getElementById('hideButton');
       let side = document.getElementById("side");
 
       if (side) {
         side.style.backgroundColor = "#252525";
+      }
+      if (hideButton) {
+        hideButton.style.display = "block";
       }
 
       const elements = {
@@ -217,8 +221,11 @@ function clickGallery() {
 function clickProject() {
   document.getElementById('home').style.display = 'none';
   document.getElementById('gallery').style.display = 'none';
-  document.getElementById('project').style.display = 'block';
-  alert('ERROR 404! Coming Soon..');
+  if (sudahLogin) {
+    document.getElementById('project').style.display = 'block';
+  } else {
+    alert('ERROR 404! Coming Soon..');
+  }
 }
 
 function playMusic() {

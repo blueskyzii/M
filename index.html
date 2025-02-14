@@ -30,7 +30,7 @@
             <div id="tab" class="tab-container">
                 <button class="tab active"  onclick="switchTab(this, 'home', clickHome)">Home</button>
                 <button class="tab" onclick="switchTab(this, 'gallery', clickGallery)">Gallery</button>
-                <button class="tab" onclick="switchTab(this, 'project', clickProject)">Project</button>
+                <button class="tab" onclick="switchTab(this, 'project', clickProject)">Note</button>
             </div>
             
             <!-- Overlay -->
@@ -46,8 +46,9 @@
                     <i class="fas fa-lock icon"></i> My birth date is x4-0x-200x</p>
                     <p class="more-text hidden">“Translate:</p>
                 </div>
-                <img src="img/moon.jpg" alt="">
+                <img src="img/moon1.png" alt="">
                 <span id="warna">NB: sorry I lost the original photo.</span>
+                <hr>
                 <div id="warna" class="side-social">
                     <a href="https://www.facebook.com/profile.php?id=100070356891708" id="a1"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
@@ -56,12 +57,13 @@
                     <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
                     <a href="https://wa.me/6285182012498" id="a1"><i class="fas fa-comments"></i></a>
                 </div>
+                <hr>
             </div>
             <div class="motivation">
                 <span id="motivasiAwal" class="motivation">"Dunia, Apakah sudah adil? atau kita yang kurang bersyukur?"</span>
                 <span id="mAkhir" class="motivation">I'll always wait for you until you say it yourself or until I see someone you like, but maybe I'll still wait for you.</span>
             </div>
-            <div class="toggle-container">
+            <div id="hideButton" class="toggle-container">
                 <label class="toggle-label">
                     <input type="checkbox" id="darkModeToggle" onclick="buttonDarkMode()">
                     <span id="buttonDark" class="slider">
@@ -71,14 +73,14 @@
             </div>
         <div id="home">
             <div class="isi-blog">
-                <h1 id="font0">WELCOME</h1>
+                <h1 id="warna" class="h1-isi">WELCOME</h1>
                 <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
                 <img src="img/setup.jpg" alt="">
-                <h2 id="font1">Produktif.</h2>
+                <h2 id="warna" class="h1-isi">Produktif.</h2><hr>
                 <p>Terkadang, kita merasa lelah dan terbebani dengan banyaknya hal yang harus dilakukan. Malas datang menghampiri, dan rasanya semua yang ingin kita capai terasa begitu jauh. Namun, ingatlah bahwa setiap langkah kecil yang kita ambil hari ini adalah bagian dari perjalanan besar yang sedang kita jalani. Rasa malas memang wajar, tapi jangan biarkan itu menghalangi impianmu. Setiap detik yang kita sia-siakan tidak akan kembali, sementara waktu terus berjalan, membawa kita lebih dekat atau lebih jauh dari tujuan kita. Cobalah untuk bangkit, walau hanya sedikit demi sedikit. Lakukan sesuatu, bahkan jika itu terasa kecil, karena terkadang kemajuan terbesar dimulai dari langkah yang tampak paling kecil. Percayalah, keberhasilan bukanlah tentang menghindari rasa malas, tetapi tentang terus maju meski kadang kita merasa tidak ingin melangkah. Tetap produktif, tetap berusaha, dan lihatlah bagaimana setiap usaha akan membuahkan hasil yang tak terduga.</p>
-                <h2 id="font2">Dunia Digital dalam Kata</h2>
+                <h2 id="warna" class="h1-isi">Dunia Digital dalam Kata</h2><hr>
                 <p>Perjalanan coding-ku dimulai sejak kelas 1 SMP, saat pertama kali mengenal dunia scripting di game Growtopia. Waktu itu, aku belajar membuat script untuk autofarm, meskipun hanya memahami dasar-dasarnya. Dari situ, aku mulai tertarik dengan coding dan mencoba memahami logika sebuah code. <br><br>Selain scripting di Growtopia, aku juga belajar dasar-dasar HTML dan CSS (JS pke AI hehehe), mencoba membuat halaman web sederhana dengan sedikit style. Meskipun belum terlalu mendalam, aku tetap menikmati prosesnya. Coding bukan hanya soal menulis kode, tapi juga memahami logika di baliknya.</p>
-                <h2 id="font3">Belajar darimana?</h2>
+                <h2 id="warna" class="h1-isi">Belajar darimana?</h2><hr>
                 <p>Semua yang aku pelajari tentang coding berasal dari otodidak. Aku nggak pernah ikut kursus atau belajar secara formal, tapi rasa penasaran selalu membuatku ingin mencoba hal baru. Internet jadi sumber utama—mulai dari membaca dokumentasi, menonton tutorial, hingga mencari solusi saat menemui error.</p>
                 <p>Selain belajar sendiri, komunitas di Discord juga banyak membantu. Bergabung dengan komunitas coding dan game scripting membuatku lebih mudah bertanya ketika menemui kesulitan. Dari sana, aku juga belajar cara berpikir lebih sistematis dan memahami berbagai trik yang nggak selalu ada di tutorial biasa.</p>
                 <div id="box" class="blog-box">
@@ -169,8 +171,22 @@
     </div>
     <div id="project">
         <div class="project">
-            <!-- <h1 id="warna" class="h1-isi">Coming Soon...</h1> -->
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1 id="warna" class="h1-isi">Cuma note</h1>
+            <h2 id="warna" class="h2-isi">what I want to say (story)</h2>
+            <p id="warna" class="p-isi">(gatau mulai darimana+malu banget)</p><hr>
+            <!-- <p id="warna" class="p-isi">Aku gak tau tapi <b>kayaknya</b> aku suka kamu sejak kita terakhir kali main bareng. Aku awalnya nyari akun social media-mu tapi gak ketemu-ketemu terus entah kayak perasaanku itu semakin besar. Pertama kali dapet Instagram-mu itu pas Mbak Lia ngepost fotomu di story What'sApp ada username kamu terus langsung coba follow terus DM tuh... (Aku bikin ini malu sendiri😭)</p>
+            <p id="warna" class="p-isi">Aku gak berani langsung confess gara-gara takut ada orang lain yang kamu suka, terus tiba-tiba ada aja masalah yang datang makin gak berani deh eh suddenly you sent a letter pas aku baca sebenernya lupa </p> -->
+            <p id="warna" class="p-isi">Kehidupanku tahun 2012-2014 it was the best year of my life. Bisa main tanpa rasa malu gak kayak sekarang tapi dulu aku juga pendiam sih wkwkwk, yang sering ngajak main apa itu kamu seingatku.<br>
+            Ngumpulin aqua gelas, Sepedaan tapi tukeran sepeda terus aku nabrak klo gak salah ada orang yang negur😭, terus makan gula merah bareng. <br></p><br>
+            <p id="warna" class="p-isi">"We listen We don't Judge"</p>
+            <div id="box" class="side-text-box">
+                <p id="warna" class="foryou">Pas kelas 1 SD temen sekelasku bikin candaan nama dikasih love terus nama orang lain, aku nulis namaku sendiri love inisial namamu apalagi ibu'e Tata nge cie-cie in aku padahal namanya kosong... bisa bisa nya masih bocil udah mikir kek gitu😭😭</p>
+            </div>
+            <h2 id="warna" class="h2-isi">you're the first to know</h2>
+            <p id="warna" class="p-isi">(yang pertama tau kecuali keluargaku)</p><hr>
+            <p id="warna" class="p-isi">Aku udah sering pindah rumah sering gak masuk sekolah karena masalah walaupun pindah tapi biasanya cuma 1-2 bulan paling cepet 1 minggu terus balik lagi ke rumah lama atau pindah gak jauh dari rumah lama, cuma pindah kali ini yang bener-bener memutus semuanya bahkan sekolahku juga sampai putus setahun, walaupun beberapa masalah diseleai-in dari sini. Kalo kamu tau Bu As, itu orangnya masih sering hubungi Anyak. Sebenernya ada alasan lain lagi tapi tunggu waktunya aja deh.<br></p><br>
+            <!-- <b>I never agree with what my family does,</b> tapi gatau lah aku gabisa keluar dari zona ini. My family has been hiding problems from me all this time, but that morning I found out that my dad was almost killed by someone di Sukorejo sana (pulang kerumah with bruised body, bleeding head, torn clothes), dan itu ternyata bukan bagian dari  masalah keluargaku lebih tepatnya <b>DI FITNAH.</b> itu alasan keluargaku pindah saat aku tanya "kok jauh" padahal semua setuju jalur hukum bahkan sudah disiapkan semuanya tapi Anyak gak setuju. ah sudahlah mungkin itu saja dulu kalau mau tau something DM aja.
+            <b><strong> It’s making me feel even more broken.. </strong></b> -->
         </div>
     </div>
     <section id="bawah" class="newsletter">
