@@ -286,7 +286,7 @@ function buttonDarkMode() {
       element.style.color = isDarkMode ? "#e0e0e0" : "";
   });
 
-  const bgElements = ['#story', '#confess-box', '#badan', '#form-box', 'input-box'
+  const bgElements = ['#story', '#confess-box', '#badan', '#form-box', '#input-box'
   ];
   bgElements.forEach(selector => {
       let element = document.querySelector(selector);
