@@ -12,7 +12,7 @@ function countDaysSince(targetDateStr) {
     const seconds = Math.floor((timeDiff / 1000) % 60);
     
     document.getElementById("output").innerHTML = `
-      <p>I've been waiting for <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (WIB), but the truth is, I've been waiting far longer—I just matched it to your special day.</p>
+      <p>after waiting for <strong>${days}d/${hours}h/${minutes}m/${seconds}s</strong> (GMT+7), and finally, I… I'm so happy.</p>
     `;
   }
 
@@ -21,7 +21,7 @@ function countDaysSince(targetDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  countDaysSince("27/12/2024");
+  countDaysSince("27/07/2023");
 });
 
 function toggleMenu() {
@@ -286,7 +286,8 @@ function buttonDarkMode() {
       element.style.color = isDarkMode ? "#e0e0e0" : "";
   });
 
-  const bgElements = ['#story', '#confess-box', '#badan'];
+  const bgElements = ['#story', '#confess-box', '#badan', '#form-box', 'input-box'
+  ];
   bgElements.forEach(selector => {
       let element = document.querySelector(selector);
       if (element) {
@@ -327,4 +328,14 @@ function cekSlide() {
 
   // Atur toggle berdasarkan kondisi
   setToggleState(kondisi);
+}
+
+function showForm() {
+  document.getElementById('anonym').style.display = "none";
+  document.getElementById('form').style.display = "flex";
+}
+
+function cancelForm() {
+  document.getElementById('anonym').style.display = "block";
+  document.getElementById('form').style.display = "none";
 }

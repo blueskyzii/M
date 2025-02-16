@@ -42,12 +42,36 @@
                 <div id="box" class="side-text-box">
                 <p id="warna"><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
                     <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
-                    <i class="fas fa-heart"></i> Fav Girl 4d617961❤<br>
+                    <i class="fas fa-heart"></i> Fav Girl 4d617961 (M❤)<br>
                     <i class="fas fa-lock icon"></i> My birth date is x4-0x-200x</p>
                     <p class="more-text hidden">“Translate:</p>
                 </div>
                 <img src="img/moon1.png" alt="">
                 <span id="warna">NB: sorry I lost the original photo.</span>
+                <h4 id='warna'>Send Message for Me (Anonym?).</h4>
+                <div id="anonym" class="anonym">
+                    <div class="anonym-button">
+                        <button onclick="showForm()">SEND</button>
+                    </div>
+                </div>
+                <div id="form">
+                    <div id="form-box">
+                        <form action="https://formspree.io/f/xnnjgyvr" method="POST">
+                            <label id="warna">
+                                Input Name (Blank=Anonym)
+                                <input id="input-box" type="text" name="Sender:">
+                            </label>
+                            <label id="warna">
+                                Your Message:
+                                <textarea id="box" name="Message:"></textarea>
+                            </label>
+                            <div class="formButton-container">
+                                <button class="sendButton" type="submit">SEND</button>
+                                <button class="cancelButton" type="button" onclick="cancelForm()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>                
                 <hr>
                 <div id="warna" class="side-social">
                     <a href="https://www.facebook.com/profile.php?id=100070356891708" id="a1"><i class="fab fa-facebook-f"></i></a>
@@ -115,8 +139,8 @@
                 
                 <div id="confess">
                     <div id="confess-box">
-                        <h2 id="warna">Error :/</h2>
-                        <p>"Error? New messages are usually here."</p>
+                        <h2 id="warna">Thanks! :D</h2>
+                        <p>"Error? I hope this is real and lasts"</p>
                         <!-- <p>If we can't keep our promise, then..</p> -->
                         <div id="output"></div>
                         <!-- <p>I've always loved you. Masalah yang kuhadapi adalah aku gak bisa mengucapkannya dengan benar. Aku minta maaf apa yang aku perbuat selama ini. Alasan aku gak  bisa mengucapkannya dengan benar adalah karena kondisiku yang dulu yang membuatku berpikir aku gak pantas dan entah apa yang aku pikirkan  dulu membuang kesempatan ku begitu saja.</p>
@@ -145,7 +169,8 @@
                 <div id="hbd">
                     <div id="hbd-box">
                         <h2 id="warna">Last..</h2>
-                        <p>Maybe late, but still want to wish you a happy birthday! 🎉 May this year bring you much happiness and success. <br>Oh yeah, happy new year too! Hope everything goes smoothly this year! 🎊</p>
+                        <p>Sorry kamu terlibat sama orang kayak aku, Introvert gak bisa confident, sering gabisa ngerespon chatmu, gada keunggulan sama sekali.. but I hope ini semua real Aku gak pengen kayak kemarin kagi :/</p>
+                        <p>Moment paling bahagia setelah sekian lama aku hidup di dunia. YOU MEAN LOT TO ME!</p>
                         <button onclick="closeConfess()">Close</button>
                     </div>
                 </div>
@@ -172,13 +197,13 @@
     <div id="project">
         <div class="project">
             <h1 id="warna" class="h1-isi">Cuma note</h1>
-            <!-- <h2 id="warna" class="h2-isi">what I want to say (story)</h2> -->
-            <!-- <p id="warna" class="p-isi">(gatau mulai darimana)</p><hr> -->
-            <!-- <p id="warna" class="p-isi">Aku gak tau tapi <b>kayaknya</b> aku suka kamu sejak kita terakhir kali main bareng. Aku awalnya nyari akun social media-mu tapi gak ketemu-ketemu terus entah kayak perasaanku itu semakin besar. Pertama kali dapet Instagram-mu itu pas Mbak Lia ngepost fotomu di story What'sApp ada username kamu terus langsung coba follow terus DM tuh... (Aku bikin ini malu sendiri😭)</p>
-            <p id="warna" class="p-isi">Aku gak berani langsung confess gara-gara takut ada orang lain yang kamu suka, terus tiba-tiba ada aja masalah yang datang makin gak berani deh eh suddenly you sent a letter pas aku baca sebenernya lupa </p> -->
-            <!-- <p id="warna" class="p-isi">Kehidupanku tahun 2012-2014 it was the best year of my life. Bisa main tanpa rasa malu gak kayak sekarang tapi dulu aku juga pendiam sih wkwkwk, yang sering ngajak main apa itu kamu seingatku.<br>
-            Ngumpulin aqua gelas, Sepedaan tapi tukeran sepeda terus aku nabrak klo gak salah ada orang yang negur😭, terus makan gula merah bareng. <br></p><br>
-            <p id="warna" class="p-isi">"We listen We don't Judge"</p>
+            <h2 id="warna" class="h2-isi">what I want to say (story)</h2>
+            <p id="warna" class="p-isi">(gatau mulai darimana)</p><hr>
+            <p id="warna" class="p-isi">Aku gak tau tapi <b>kayaknya</b> aku suka kamu sejak kita terakhir kali main bareng. Aku awalnya nyari akun social media-mu tapi gak ketemu-ketemu terus entah kayak perasaanku itu semakin besar. Pertama kali dapet Instagram-mu itu pas Mbak Lia ngepost fotomu di story What'sApp ada username kamu terus langsung coba follow terus DM tuh...</p>
+            <p id="warna" class="p-isi">Aku gak berani langsung confess gara-gara takut ada orang lain yang kamu suka, terus tiba-tiba ada aja masalah yang datang makin gak berani deh eh suddenly you sent a letter pas aku baca sebenernya lupa tapi.. Aku cuma berharap kita gak terpisah seperti kemarin.</p>
+            <p id="warna" class="p-isi">Kehidupanku tahun 2012-2014 it was the best year of my life. Bisa main tanpa rasa malu gak kayak sekarang tapi dulu aku juga pendiam sih wkwkwk, yang sering ngajak main apa itu kamu seingatku.<br>
+            Ngumpulin aqua gelas, Sepedaan tapi tukeran sepeda terus aku nabrak klo gak salah sampe ada orang yang negur, terus makan gula merah bareng. <br></p><br>
+            <!-- <p id="warna" class="p-isi">"We listen We don't Judge"</p>
             <div id="box" class="side-text-box">
                 <p id="warna" class="foryou">Pas kelas 1 SD temen sekelasku bikin candaan nama dikasih love terus nama orang lain, aku nulis namaku sendiri love inisial namamu apalagi ibu'e Tata nge cie-cie in aku padahal namanya kosong... bisa bisa nya masih bocil udah mikir kek gitu😭😭</p>
             </div>
