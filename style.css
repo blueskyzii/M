@@ -108,7 +108,7 @@ body {
 
 .anonym-button {
     display: flex;
-    margin-left: 26%;
+    margin-left: 29%;
 }
 .anonym-button button {
     margin: 0 20px 20px 20px;
@@ -263,6 +263,13 @@ header h1 {
     width: 100%;
 }
 
+.nb {
+    display: flex;
+    margin: 0px 0 20px 0;
+}
+.sendA {
+    text-align: center;
+}
 .tab {
     padding: 10px 20px;
     font-size: 16px;

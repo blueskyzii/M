@@ -99,6 +99,15 @@ function stringToBinary(str) {
         hideButton.style.display = "block";
       }
 
+      // if (heart.isEmpty()) {
+      //   heart.fillWithYourLove();
+      // } else if (fallInLove) {
+      //   heart.comeToYou();
+      // } else {
+      //   heart.waitForYou();
+      //   heart.keepThinkingOfYou();
+      // }
+
       const elements = {
         bawah: "#121212",
         // buttonDark: "#1e1e1e",
@@ -126,7 +135,6 @@ function stringToBinary(str) {
         element.style.color = "#e0e0e0";
       });
 
-      // Mengubah warna latar belakang untuk elemen-elemen yang membutuhkan
       const bgElements = ['#story', '#confess-box', '#badan'];
       bgElements.forEach(selector => {
         let element = document.querySelector(selector);
