@@ -16,8 +16,8 @@ function countDaysSince(targetDateStr) {
     `;
   }
 
-  updateCountdown(); // Update pertama kali
-  setInterval(updateCountdown, 1000); // Perbarui setiap detik
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -47,11 +47,10 @@ function toggleText() {
 let sudahLogin = false;
 let click
 
-// Convert to binary
 function stringToBinary(str) {
     let binaryString = '';
     for (let i = 0; i < str.length; i++) {
-      binaryString += str.charCodeAt(i).toString(2).padStart(8, '0'); // convert char to binary
+      binaryString += str.charCodeAt(i).toString(2).padStart(8, '0');
     }
     return binaryString;
   }
@@ -59,21 +58,18 @@ function stringToBinary(str) {
   const correctPasswordBinary = "0100110101000001010110010100000100100000010011010100100101010010010000010100111001000100010000010010000001010011010000010101001001001001";
 
   function checkPassword() {
-    const input = document.getElementById("password").value; // Get input value
+    const input = document.getElementById("password").value;
     const error = document.getElementById("error");
     const overlay = document.getElementById("overlay");
 
     if (!input) {
-      error.textContent = "Please input something."; // Handle empty input
+      error.textContent = "Please input something.";
       return;
     }
 
-    // Convert input to binary
     const inputBinary = stringToBinary(input);
 
-    // Compare binary input with binary correct password
     if (inputBinary === correctPasswordBinary) {
-      // Mulai memainkan musik
       playMusic();
       buttonDarkMode();
       tulisHistory();
@@ -86,7 +82,7 @@ function stringToBinary(str) {
       sudahLogin = true
       
       document.addEventListener("DOMContentLoaded", function () {
-        cekSlide(); // Panggil cekSlide setelah halaman selesai dimuat
+        cekSlide();
       });
       
       let hideButton = document.getElementById('hideButton');
@@ -99,15 +95,19 @@ function stringToBinary(str) {
         hideButton.style.display = "block";
       }
 
+      // let heart = new Heart();
+      // let onlyFor = "4d617961";
+      
       // if (heart.isEmpty()) {
+      //   heart.waitForYou();
       //   heart.fillWithYourLove();
-      // } else if (fallInLove) {
+      // } else if (heart.onlyFrom(onlyFor)) {
       //   heart.comeToYou();
       // } else {
-      //   heart.waitForYou();
-      //   heart.keepThinkingOfYou();
+      //   heart.rejectOtherLove();
+      //   heart.keepThinkingOfYou(onlyFor);
       // }
-
+      
       const elements = {
         bawah: "#121212",
         // buttonDark: "#1e1e1e",
@@ -326,15 +326,12 @@ function tulisHistory() {
 function cekSlide() {
   let toggleInput = document.querySelector(".toggle-label input");
 
-  // Fungsi untuk mengaktifkan slider berdasarkan kondisi
   function setToggleState(state) {
       toggleInput.checked = state;
   }
 
-  // Contoh kondisi awal (ubah sesuai kebutuhan)
-  let kondisi = false; // Default: OFF (geser ke kiri)
+  let kondisi = false;
 
-  // Atur toggle berdasarkan kondisi
   setToggleState(kondisi);
 }
 

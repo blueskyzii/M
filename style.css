@@ -583,31 +583,31 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
+}
 
-  #auth-box {
+#auth-box {
     background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
+}
 
-  #auth-box h2 {
+#auth-box h2 {
     margin-bottom: 10px;
-  }
+}
 
-  input[type="text"] {
+input[type="text"] {
     padding: 10px;
     width: 100%;
     margin: 10px -10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
 
-  button {
+button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -615,21 +615,21 @@ a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  button:hover {
+button:hover {
     background-color: #0056b3;
-  }
+}
 
-  #error {
+#error {
     text-align: center;
     margin-top: 10px;
     color: red;
-  }
+}
 
-  #hideButton {
+#hideButton {
     display: none;
-  }
+}
 
 #confess {
     position: fixed;
