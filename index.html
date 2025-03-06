@@ -18,223 +18,225 @@
 </head>
 <body>
     <body id="badan">
-        <div id="content">
-            <header id="header">
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div id="hamburger"></div>
-                    <div id="hamburger"></div>
-                    <div id="hamburger"></div>
+        <div class="main-content">
+            <div id="content">
+                <header id="header">
+                    <div id="hamburger" class="hamburger" onclick="toggleMenu()">
+                        <div id="hamburger"></div>
+                        <div id="hamburger"></div>
+                        <div id="hamburger"></div>
+                    </div>
+                    <h1>Personal Blog</h1>
+                </header>
+                <div id="tab" class="tab-container">
+                    <button class="tab active"  onclick="switchTab(this, 'home', clickHome)">Home</button>
+                    <button class="tab" onclick="switchTab(this, 'gallery', clickGallery)">Gallery</button>
+                    <button class="tab" onclick="switchTab(this, 'project', clickProject)">Note</button>
                 </div>
-                <h1>Personal Blog</h1>
-            </header>
-            <div id="tab" class="tab-container">
-                <button class="tab active"  onclick="switchTab(this, 'home', clickHome)">Home</button>
-                <button class="tab" onclick="switchTab(this, 'gallery', clickGallery)">Gallery</button>
-                <button class="tab" onclick="switchTab(this, 'project', clickProject)">Note</button>
-            </div>
+                
+                <!-- Overlay -->
+                <div class="overlay" onclick="toggleMenu()"></div>
             
-            <!-- Overlay -->
-            <div class="overlay" onclick="toggleMenu()"></div>
-        
-            <!-- Side Panel -->
-            <div id="side" class="side-panel">
-                <h2 id="warna">Short Profile</h2>
+                <!-- Side Panel -->
+                <div id="side" class="side-panel">
+                    <h2 id="warna">Short Profile</h2>
+                    <div id="box" class="side-text-box">
+                    <p id="warna"><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
+                        <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
+                        <i class="fas fa-heart"></i> Fav Girl 4d617961<br>
+                        <i class="fas fa-lock icon"></i> My birth date is 24-0x-200x</p>
+                        <p class="more-text hidden">“Translate:</p>
+                    </div>
+                    <img src="img/moon1.png" alt="">
+                    <span id="warna" class="nb">NB: sorry I lost the original photo.</span>
+                    <hr>
+                    <h4 id='warna' class="sendA">Send Message for Me (Anonym?).</h4>
+                    <div id="anonym" class="anonym">
+                        <div class="anonym-button">
+                            <button onclick="showForm()">SEND</button>
+                        </div>
+                    </div>
+                    <div id="form">
+                        <div id="form-box">
+                            <form action="https://formspree.io/f/xnnjgyvr" method="POST">
+                                <label id="warna">
+                                    Input Name (Blank=Anonym)
+                                    <input id="input-box" type="text" name="Sender:">
+                                </label>
+                                <label id="warna">
+                                    Your Message:
+                                    <textarea id="box" name="Message:"></textarea>
+                                </label>
+                                <div class="formButton-container">
+                                    <button class="sendButton" type="submit">SEND</button>
+                                    <button class="cancelButton" type="button" onclick="cancelForm()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>                
+                    <hr>
+                    <div id="warna" class="side-social">
+                        <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.com/users/1211886368565895221" id="a1"><i class="fab fa-discord"></i></a>
+                        <a href="https://tiktok.com/blueskyzii" id="a1"><i class="fab fa-tiktok"></i></a>
+                        <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/6285182012498" id="a1"><i class="fas fa-comments"></i></a>
+                    </div>
+                </div>
+                <div class="motivation">
+                    <span id="motivasiAwal" class="motivation">"Dunia, Apakah sudah adil? atau kita yang kurang bersyukur?"</span>
+                    <span id="mAkhir" class="motivation">I'll always wait for you until you say it yourself or until I see someone you like, but maybe I'll still wait for you.</span>
+                </div>
+                <div id="hideButton" class="toggle-container">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="darkModeToggle" onclick="buttonDarkMode()">
+                        <span id="buttonDark" class="slider">
+                            <i id="darkModeIcon" class="fas fa-eye"></i>
+                        </span>
+                    </label>
+                </div>
+            <div id="home">
+                <div class="isi-blog">
+                    <h1 id="warna" class="h1-isi">WELCOME</h1>
+                    <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
+                    <img src="img/setup.jpg" alt="">
+                    <h2 id="warna" class="h1-isi">Produktif.</h2><hr>
+                    <p>Terkadang, kita merasa lelah dan terbebani dengan banyaknya hal yang harus dilakukan. Malas datang menghampiri, dan rasanya semua yang ingin kita capai terasa begitu jauh. Namun, ingatlah bahwa setiap langkah kecil yang kita ambil hari ini adalah bagian dari perjalanan besar yang sedang kita jalani. Rasa malas memang wajar, tapi jangan biarkan itu menghalangi impianmu. Setiap detik yang kita sia-siakan tidak akan kembali, sementara waktu terus berjalan, membawa kita lebih dekat atau lebih jauh dari tujuan kita. Cobalah untuk bangkit, walau hanya sedikit demi sedikit. Lakukan sesuatu, bahkan jika itu terasa kecil, karena terkadang kemajuan terbesar dimulai dari langkah yang tampak paling kecil. Percayalah, keberhasilan bukanlah tentang menghindari rasa malas, tetapi tentang terus maju meski kadang kita merasa tidak ingin melangkah. Tetap produktif, tetap berusaha, dan lihatlah bagaimana setiap usaha akan membuahkan hasil yang tak terduga.</p>
+                    <h2 id="warna" class="h1-isi">Dunia Digital dalam Kata</h2><hr>
+                    <p>Perjalanan coding-ku dimulai sejak kelas 1 SMP, saat pertama kali mengenal dunia scripting di game Growtopia. Waktu itu, aku belajar membuat script untuk autofarm, meskipun hanya memahami dasar-dasarnya. Dari situ, aku mulai tertarik dengan coding dan mencoba memahami logika sebuah code. <br><br>Selain scripting di Growtopia, aku juga belajar dasar-dasar HTML dan CSS (JS pke AI hehehe), mencoba membuat halaman web sederhana dengan sedikit style. Meskipun belum terlalu mendalam, aku tetap menikmati prosesnya. Coding bukan hanya soal menulis kode, tapi juga memahami logika di baliknya.</p>
+                    
+                    <!-- <div class="horizon-scroll">
+                        <div class="container-scroll">
+                        <figure class="item-scroll"><img src="img/img1.jpg"></figure>
+                        <figure class="item-scroll"><img src="img/img2.jpg"></figure>
+                        <figure class="item-scroll"><img src="img/img3.jpg"></figure>
+                        <figure class="item-scroll"><img src="img/img4.jpg"></figure>
+                        </div>
+                    </div> -->
+                    
+                    <h2 id="warna" class="h1-isi">Belajar darimana?</h2><hr>
+                    <p>Semua yang aku pelajari tentang coding berasal dari otodidak. Aku nggak pernah ikut kursus atau belajar secara formal, tapi rasa penasaran selalu membuatku ingin mencoba hal baru. Internet jadi sumber utama—mulai dari membaca dokumentasi, menonton tutorial, hingga mencari solusi saat menemui error.</p>
+                    <p>Selain belajar sendiri, komunitas di Discord juga banyak membantu. Bergabung dengan komunitas coding dan game scripting membuatku lebih mudah bertanya ketika menemui kesulitan. Dari sana, aku juga belajar cara berpikir lebih sistematis dan memahami berbagai trik yang nggak selalu ada di tutorial biasa.</p>
+                    <div id="box" class="blog-box">
+                        <p>Awalnya aku gabung di server Discord cuma buat lihat-lihat, tapi ternyata banyak orang yang share ilmu. Pernah suatu kali aku stuck di error aneh, terus ada yang bantu jelasin dengan cara yang simpel banget. Dari situ, aku jadi makin sering aktif.</p>
+                    </div>
+                    <p>Meskipun prosesnya nggak selalu mudah, belajar coding dengan cara ini terasa lebih fleksibel dan menyenangkan. Aku mungkin belum menguasai banyak, tapi dengan terus mencoba dan bertanya, aku percaya akan selalu ada hal baru yang bisa dipelajari.</p>
+                </div>
+
+                <section class="featured-posts">       
+                
+                </section>
+                <div class="akhir-blog">
+                    <h2 id="font4">Who Cares?</h2>
+                    <p>Ini cuma blog biasa. Ini benar-benar hanya blog biasa.. iya kan?</p>
+                    <div id="buttonClick" class="button-container">
+                        <button onclick="showOverlay()">CLICK</button>
+                    </div>
+                    
+                    <div id="confess">
+                        <div id="confess-box">
+                            <h2 id="warna">Thanks! :D</h2>
+                            <p>"Error? I hope this is real and lasts"</p>
+                            <!-- <p>If we can't keep our promise, then..</p> -->
+                            <div id="output"></div>
+                            <!-- <p>I've always loved you. Masalah yang kuhadapi adalah aku gak bisa mengucapkannya dengan benar. Aku minta maaf apa yang aku perbuat selama ini. Alasan aku gak  bisa mengucapkannya dengan benar adalah karena kondisiku yang dulu yang membuatku berpikir aku gak pantas dan entah apa yang aku pikirkan  dulu membuang kesempatan ku begitu saja.</p>
+                            <p>Dulu keluarga ku saat awal masalahnya muncul itu yang membuatku 'trauma' yang gak  bisa berinteraksi sosial, berpikir jernih, dan ngomong dengan jelas benar saja gak bisa. Bahkan pernah ditertawakan juga karena ngomong belepotan gak jelas.</p>
+                            <p>Alasanku gak membalas chatmu yang terakhir itu karena aku takut kamu kecewa denganku atau hal lain.. seperti keluarga ku yang masalahnya sangat besar di Gresik.</p>
+                            <p>Jujur aku bener bener bingung cara menghadapi situasi seperti ini. Aku bersumpah demi apapun short story itulah yang aku alami dan aku perjelas disini juga, Kalau gak percaya... itu hak mu.. Aku cuma ingin minta maaf karena aku selalu dihantui sifat sifat burukku yang menghambatku.</p>
+                            <p>Last.. I swear on my life that I've never made you a second choice.</p> -->
+                            <button onclick="showHBD()">Close</button>
+                            <audio id="myAudio" loop>
+                                <source src="img/blue.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div id="overlay">
+                        <div id="auth-box">
+                            <h2>Just Try it</h2>
+                            <p>Try input something with all caps</p>
+                            <input type="text" id="password">
+                            <button onclick="checkPassword()">Submit</button>
+                            <!-- <button onclick="closeOverlay()">Close</button> -->
+                            <p id="error" class="error"></p>
+                        </div>
+                    </div>
+
+                    <div id="hbd">
+                        <div id="hbd-box">
+                            <h2 id="warna">Last..</h2>
+                            <p>I hope ini semua real Aku gak pengen kayak kemarin kagi :/</p>
+                            <p>Moment paling bahagia setelah sekian lama aku hidup di dunia. YOU MEAN LOT TO ME!</p>
+                            <p>Estrella?? 🫠</p>
+                            <button onclick="closeConfess()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gallery">
+            <div class="gallery">
+                <h1 id="warna">Captured Moments.</h1>
+                <h2 id="warna">Photo by me</h2>
+                <img src="img/me 1.jpg" alt="Photo by me">
+                <img src="img/moon.png" alt="Photo by me">
+                <h2 id="warna">Random</h2>
+                <img src="img/ml.jpg" alt="Random">
+                <img src="img/hutao.png" alt="Random">
+                <!-- <img src="img/mbr.jpg" alt="Random"> -->
+                <h2 id="warna">Moment</h2>
+                <img src="img/mabar.bmp" alt="Random">
+                <img src="img/random.jpg" alt="Random">
+                <h2 id="warna">Me</h2>
+                <p id="warna">Coming Soon..</p>
+            </div>
+        </div>
+        <div id="project">
+            <div class="project">
+                <h1 id="warna" class="h1-isi">Cuma note</h1>
+                <h2 id="warna" class="h2-isi">what I want to say (story)</h2>
+                <p id="warna" class="p-isi">(gatau mulai darimana)</p><hr>
+                <p id="warna" class="p-isi">Aku gak tau tapi <b>kayaknya</b> aku suka kamu sejak kita terakhir kali main bareng. Aku awalnya nyari akun social media-mu tapi gak ketemu-ketemu terus entah kayak perasaanku itu semakin besar. Pertama kali dapet Instagram-mu itu pas Mbak Lia ngepost fotomu di story What'sApp ada username kamu terus langsung coba follow terus DM tuh...</p>
+                <p id="warna" class="p-isi">Aku gak berani langsung confess gara-gara takut ada orang lain yang kamu suka, terus tiba-tiba ada aja masalah yang datang makin gak berani deh eh suddenly you sent a letter pas aku baca sebenernya lupa tapi.. Aku cuma berharap kita gak terpisah seperti kemarin.</p>
+                <p id="warna" class="p-isi">Tahun 2012-2014 it was the best year. Bisa main tanpa rasa malu gak kayak sekarang tapi dulu aku juga pendiam sih wkwkwk, yang sering ngajak main apa itu kamu seingatku.<br>
+                Ngumpulin aqua gelas, Sepedaan tapi tukeran sepeda terus aku nabrak klo gak salah sampe ada orang yang negur, terus makan gula merah bareng. <br></p><br>
+                
+                <div id="story" class="text-box">
+                    <h3 class="story">Short Story</h3>
+                    <!-- <p>*2712 No Longer Available :/</p> -->
+                    <p>Di sebuah desa kecil, terdapat dua anak kecil, seorang anak laki-laki dan seorang anak perempuan, menghabiskan hari-hari mereka bermain bersama. Mereka tertawa, berlarian, dan membangun kenangan yang tak terlupakan. Namun kebahagiaan mereka berubah ketika si gadis harus pindah ke luar negeri bersama keluarganya. Sebelum pergi, dia menyadari bahwa dia memiliki perasaan terhadap teman masa kecilnya, tetapi tidak pernah mendapat kesempatan untuk mengungkapkannya.</p>
+                    <p>Sementara itu, si anak laki-laki merindukannya setiap hari. Dia mencoba berbagai cara untuk menghubunginya, dan setelah delapan tahun yang panjang, akhirnya dia berhasil. Ketika mereka terhubung kembali si anak perempuan menggunakan bahasa yang sedikit menjadi halangan si anak laki-laki, mereka berjanji untuk menunggu satu sama lain sampai suatu saat, apapun yang terjadi.</p>
+                    <p>Namun, hidup tidak selalu baik. Seiring waktu, anak laki-laki itu berubah. Sebuah peristiwa besar dalam hidupnya membuatnya takut dan menghantui dirinya yang membuatnya susah menghadapi situasi sosial. Setelah lulus dari sekolah menengah, seorang gadis lain mengungkapkan perasaannya kepadanya. Gadis ini kebetulan tahu tentang teman masa kecilnya dan menghubunginya karena suatu alasan. Tak lama setelah itu, dia menerima surat dari teman masa kecilnya—surat yang mengungkapkan perasaan gadis itu. Namun karena bayangan yang mennghantui-nya, dia berpura-pura tidak pernah melihat isinya karena suatu alasan yang tidak bisa di jelaskan.</p>
+                    <p>bayangan yang mennghantui-nya semakin dalam. Dia memilih untuk diam mengabaikan gadis yang telah mengungkapkan perasaannya dan tidak sengaja mengabaikan teman masa kecilnya juga. Suatu hari, dia melakukan kesalahan besar. Ketika mencoba menghubungi teman masa kecilnya, saat dia bertanya, "Apakah kamu sedang berkencan dengannya?"—merujuk pada gadis yang mengungkapkan perasaannya kepadanya—dia tidak bisa menjawab dengan benar padahal dia tidak berkencan dengan siapapun. Diamnya menyebabkan teman masa kecilnya salah paham, percaya bahwa dia benar-benar dalam hubungan dengan gadis itu dan membuatnya berpikir bawha dirinya adalah Second choice.</p>
+                    <p>Seiring berjalannya waktu, dia terpaksa untuk untuk pindah dari desa itu dan memutuskan hubungan dengan semua orang yang ada di desa itu, termasuk teman masa kecilnya. Beberapa tahun kemudian, dia mencoba menghubunginya lagi, berharap untuk mengonfirmasi apakah janji mereka masih berlaku karena anak laki-laki tidak mau berpisah dengannya. Namun saat itu, teman masa kecilnya sudah kecewa dan dia bingung lalu diam dan tidak berani memberikan penjelasan.</p>
+                    <p>Dengan setiap hari yang berlalu, penyesalannya semakin dalam. Dia sangat ingin menjelaskan semuanya dari awal, tetapi tertahan oleh rasa takut—takut karena dirinya tidak pantas dengan dia karena keluarga nya yang bermasalah dan takut karena bayangan yang mennghantui-nya. Pada akhirnya, anak laki-laki itu hidup dalam kesendirian, terperangkap dalam kenangan yang tidak pernah bisa dia lepaskan.</p>
+                    <p>Namun, di dalam hatinya, anak laki-laki itu terus berharap agar dirinya sembuh dari bayangan yang menghalanginya untuk berbicara dengan jelas. Dia berharap suatu hari nanti, teman masa kecilnya akan menghubunginya lagi. Ketika itu terjadi, dia berjanji akan menjelaskan semuanya dari awal dan melawan bayangan yang menghantuinya yang (mungkin) menyebabkan kesalahpahaman tersebut.</p>
+                    <p>Ada alasan lain yang membuatnya penakut dan menyebabkan dia kesulitan berbicara dengan jelas. Ketidakmampuannya untuk menyampaikan perasaan dan niatnya dengan tepat menyebabkan banyak kesalahpahaman, yang akhirnya mempengaruhi hubungannya dengan teman masa kecilnya. TAMAT?</p>
+                <span class="sok">- ?!!</span>
+                </div>     
+
+                <!-- <p id="warna" class="p-isi">"We listen We don't Judge"</p>
                 <div id="box" class="side-text-box">
-                <p id="warna"><i class="fas fa-users icon"></i> Name Rafa Ahmad Alzidani<br>
-                    <i class="fas fa-trophy icon"></i> Hobby reading and "try" coding.<br>
-                    <i class="fas fa-heart"></i> Fav Girl 4d617961<br>
-                    <i class="fas fa-lock icon"></i> My birth date is 24-0x-200x</p>
-                    <p class="more-text hidden">“Translate:</p>
+                    <p id="warna" class="foryou">Pas kelas 1 SD temen sekelasku bikin candaan nama dikasih love terus nama orang lain, aku nulis namaku sendiri love inisial namamu apalagi ibu'e Tata nge cie-cie in aku padahal namanya kosong... bisa bisa nya masih bocil udah mikir kek gitu😭😭</p>
                 </div>
-                <img src="img/moon1.png" alt="">
-                <span id="warna" class="nb">NB: sorry I lost the original photo.</span>
-                <hr>
-                <h4 id='warna' class="sendA">Send Message for Me (Anonym?).</h4>
-                <div id="anonym" class="anonym">
-                    <div class="anonym-button">
-                        <button onclick="showForm()">SEND</button>
-                    </div>
-                </div>
-                <div id="form">
-                    <div id="form-box">
-                        <form action="https://formspree.io/f/xnnjgyvr" method="POST">
-                            <label id="warna">
-                                Input Name (Blank=Anonym)
-                                <input id="input-box" type="text" name="Sender:">
-                            </label>
-                            <label id="warna">
-                                Your Message:
-                                <textarea id="box" name="Message:"></textarea>
-                            </label>
-                            <div class="formButton-container">
-                                <button class="sendButton" type="submit">SEND</button>
-                                <button class="cancelButton" type="button" onclick="cancelForm()">Cancel</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>                
-                <hr>
-                <div id="warna" class="side-social">
-                    <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
-                    <a href="https://discord.com/users/1211886368565895221" id="a1"><i class="fab fa-discord"></i></a>
-                    <a href="https://tiktok.com/blueskyzii" id="a1"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/6285182012498" id="a1"><i class="fas fa-comments"></i></a>
-                </div>
-            </div>
-            <div class="motivation">
-                <span id="motivasiAwal" class="motivation">"Dunia, Apakah sudah adil? atau kita yang kurang bersyukur?"</span>
-                <span id="mAkhir" class="motivation">I'll always wait for you until you say it yourself or until I see someone you like, but maybe I'll still wait for you.</span>
-            </div>
-            <div id="hideButton" class="toggle-container">
-                <label class="toggle-label">
-                    <input type="checkbox" id="darkModeToggle" onclick="buttonDarkMode()">
-                    <span id="buttonDark" class="slider">
-                        <i id="darkModeIcon" class="fas fa-eye"></i>
-                    </span>
-                </label>
-            </div>
-        <div id="home">
-            <div class="isi-blog">
-                <h1 id="warna" class="h1-isi">WELCOME</h1>
-                <p>Welcome to my little digital haven! I'm beyond excited to have you here. This blog is a personal space where I share the things I love, the lessons I've learned, and the experiences that shape who I am. It's not just about posting content. My hope is that you'll find something here that sparks inspiration, encourages reflection, or simply brings a smile to your face. So take a seat, grab a cup of coffee (or tea!), and let's explore the world together. Enjoy!</p>
-                <img src="img/setup.jpg" alt="">
-                <h2 id="warna" class="h1-isi">Produktif.</h2><hr>
-                <p>Terkadang, kita merasa lelah dan terbebani dengan banyaknya hal yang harus dilakukan. Malas datang menghampiri, dan rasanya semua yang ingin kita capai terasa begitu jauh. Namun, ingatlah bahwa setiap langkah kecil yang kita ambil hari ini adalah bagian dari perjalanan besar yang sedang kita jalani. Rasa malas memang wajar, tapi jangan biarkan itu menghalangi impianmu. Setiap detik yang kita sia-siakan tidak akan kembali, sementara waktu terus berjalan, membawa kita lebih dekat atau lebih jauh dari tujuan kita. Cobalah untuk bangkit, walau hanya sedikit demi sedikit. Lakukan sesuatu, bahkan jika itu terasa kecil, karena terkadang kemajuan terbesar dimulai dari langkah yang tampak paling kecil. Percayalah, keberhasilan bukanlah tentang menghindari rasa malas, tetapi tentang terus maju meski kadang kita merasa tidak ingin melangkah. Tetap produktif, tetap berusaha, dan lihatlah bagaimana setiap usaha akan membuahkan hasil yang tak terduga.</p>
-                <h2 id="warna" class="h1-isi">Dunia Digital dalam Kata</h2><hr>
-                <p>Perjalanan coding-ku dimulai sejak kelas 1 SMP, saat pertama kali mengenal dunia scripting di game Growtopia. Waktu itu, aku belajar membuat script untuk autofarm, meskipun hanya memahami dasar-dasarnya. Dari situ, aku mulai tertarik dengan coding dan mencoba memahami logika sebuah code. <br><br>Selain scripting di Growtopia, aku juga belajar dasar-dasar HTML dan CSS (JS pke AI hehehe), mencoba membuat halaman web sederhana dengan sedikit style. Meskipun belum terlalu mendalam, aku tetap menikmati prosesnya. Coding bukan hanya soal menulis kode, tapi juga memahami logika di baliknya.</p>
-                
-                <!-- <div class="horizon-scroll">
-                    <div class="container-scroll">
-                       <figure class="item-scroll"><img src="img/img1.jpg"></figure>
-                       <figure class="item-scroll"><img src="img/img2.jpg"></figure>
-                       <figure class="item-scroll"><img src="img/img3.jpg"></figure>
-                       <figure class="item-scroll"><img src="img/img4.jpg"></figure>
-                    </div>
-                </div> -->
-                
-                <h2 id="warna" class="h1-isi">Belajar darimana?</h2><hr>
-                <p>Semua yang aku pelajari tentang coding berasal dari otodidak. Aku nggak pernah ikut kursus atau belajar secara formal, tapi rasa penasaran selalu membuatku ingin mencoba hal baru. Internet jadi sumber utama—mulai dari membaca dokumentasi, menonton tutorial, hingga mencari solusi saat menemui error.</p>
-                <p>Selain belajar sendiri, komunitas di Discord juga banyak membantu. Bergabung dengan komunitas coding dan game scripting membuatku lebih mudah bertanya ketika menemui kesulitan. Dari sana, aku juga belajar cara berpikir lebih sistematis dan memahami berbagai trik yang nggak selalu ada di tutorial biasa.</p>
-                <div id="box" class="blog-box">
-                    <p>Awalnya aku gabung di server Discord cuma buat lihat-lihat, tapi ternyata banyak orang yang share ilmu. Pernah suatu kali aku stuck di error aneh, terus ada yang bantu jelasin dengan cara yang simpel banget. Dari situ, aku jadi makin sering aktif.</p>
-                </div>
-                <p>Meskipun prosesnya nggak selalu mudah, belajar coding dengan cara ini terasa lebih fleksibel dan menyenangkan. Aku mungkin belum menguasai banyak, tapi dengan terus mencoba dan bertanya, aku percaya akan selalu ada hal baru yang bisa dipelajari.</p>
-            </div>
-
-            <section class="featured-posts">       
-            
-            </section>
-            <div class="akhir-blog">
-                <h2 id="font4">Who Cares?</h2>
-                <p>Ini cuma blog biasa. Ini benar-benar hanya blog biasa.. iya kan?</p>
-                <div id="buttonClick" class="button-container">
-                    <button onclick="showOverlay()">CLICK</button>
-                </div>
-                
-                <div id="confess">
-                    <div id="confess-box">
-                        <h2 id="warna">Thanks! :D</h2>
-                        <p>"Error? I hope this is real and lasts"</p>
-                        <!-- <p>If we can't keep our promise, then..</p> -->
-                        <div id="output"></div>
-                        <!-- <p>I've always loved you. Masalah yang kuhadapi adalah aku gak bisa mengucapkannya dengan benar. Aku minta maaf apa yang aku perbuat selama ini. Alasan aku gak  bisa mengucapkannya dengan benar adalah karena kondisiku yang dulu yang membuatku berpikir aku gak pantas dan entah apa yang aku pikirkan  dulu membuang kesempatan ku begitu saja.</p>
-                        <p>Dulu keluarga ku saat awal masalahnya muncul itu yang membuatku 'trauma' yang gak  bisa berinteraksi sosial, berpikir jernih, dan ngomong dengan jelas benar saja gak bisa. Bahkan pernah ditertawakan juga karena ngomong belepotan gak jelas.</p>
-                        <p>Alasanku gak membalas chatmu yang terakhir itu karena aku takut kamu kecewa denganku atau hal lain.. seperti keluarga ku yang masalahnya sangat besar di Gresik.</p>
-                        <p>Jujur aku bener bener bingung cara menghadapi situasi seperti ini. Aku bersumpah demi apapun short story itulah yang aku alami dan aku perjelas disini juga, Kalau gak percaya... itu hak mu.. Aku cuma ingin minta maaf karena aku selalu dihantui sifat sifat burukku yang menghambatku.</p>
-                        <p>Last.. I swear on my life that I've never made you a second choice.</p> -->
-                        <button onclick="showHBD()">Close</button>
-                        <audio id="myAudio" loop>
-                            <source src="img/blue.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-
-                <div id="overlay">
-                    <div id="auth-box">
-                        <h2>Just Try it</h2>
-                        <p>Try input something with all caps</p>
-                        <input type="text" id="password">
-                        <button onclick="checkPassword()">Submit</button>
-                        <!-- <button onclick="closeOverlay()">Close</button> -->
-                        <p id="error" class="error"></p>
-                    </div>
-                </div>
-
-                <div id="hbd">
-                    <div id="hbd-box">
-                        <h2 id="warna">Last..</h2>
-                        <p>I hope ini semua real Aku gak pengen kayak kemarin kagi :/</p>
-                        <p>Moment paling bahagia setelah sekian lama aku hidup di dunia. YOU MEAN LOT TO ME!</p>
-                        <p>Estrella?? 🫠</p>
-                        <button onclick="closeConfess()">Close</button>
-                    </div>
-                </div>
+                <h2 id="warna" class="h2-isi">you're the first to know</h2>
+                <p id="warna" class="p-isi">(yang pertama tau kecuali keluargaku)</p><hr>
+                <p id="warna" class="p-isi">Aku udah sering pindah rumah sering gak masuk sekolah karena masalah walaupun pindah tapi biasanya cuma 1-2 bulan paling cepet 1 minggu terus balik lagi ke rumah lama atau pindah gak jauh dari rumah lama, cuma pindah kali ini yang bener-bener memutus semuanya bahkan sekolahku juga sampai putus setahun, walaupun beberapa masalah diseleai-in dari sini. Kalo kamu tau Bu As, itu orangnya masih sering hubungi Anyak. Sebenernya ada alasan lain lagi tapi tunggu waktunya aja deh.<br></p><br> -->
+                <!-- <b>I never agree with what my family does,</b> tapi gatau lah aku gabisa keluar dari zona ini. My family has been hiding problems from me all this time, but that morning I found out that my dad was almost killed by someone di Sukorejo sana (pulang kerumah with bruised body, bleeding head, torn clothes), dan itu ternyata bukan bagian dari  masalah keluargaku lebih tepatnya <b>DI FITNAH.</b> itu alasan keluargaku pindah saat aku tanya "kok jauh" padahal semua setuju jalur hukum bahkan sudah disiapkan semuanya tapi Anyak gak setuju. ah sudahlah mungkin itu saja dulu kalau mau tau something DM aja.
+                <b><strong> It’s making me feel even more broken.. </strong></b> -->
             </div>
         </div>
+        <section id="bawah" class="newsletter">
+            <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
+            <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100070356891708" id="a1"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
+                <a href="https://discord.com/users/1211886368565895221" id="a1"><i class="fab fa-discord"></i></a>
+                <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
     </div>
-    <div id="gallery">
-        <div class="gallery">
-            <h1 id="warna">Captured Moments.</h1>
-            <h2 id="warna">Photo by me</h2>
-            <img src="img/me 1.jpg" alt="Photo by me">
-            <img src="img/moon.png" alt="Photo by me">
-            <h2 id="warna">Random</h2>
-            <img src="img/ml.jpg" alt="Random">
-            <img src="img/hutao.png" alt="Random">
-            <!-- <img src="img/mbr.jpg" alt="Random"> -->
-            <h2 id="warna">Moment</h2>
-            <img src="img/mabar.bmp" alt="Random">
-            <img src="img/random.jpg" alt="Random">
-            <h2 id="warna">Me</h2>
-            <p id="warna">Coming Soon..</p>
-        </div>
-    </div>
-    <div id="project">
-        <div class="project">
-            <h1 id="warna" class="h1-isi">Cuma note</h1>
-            <h2 id="warna" class="h2-isi">what I want to say (story)</h2>
-            <p id="warna" class="p-isi">(gatau mulai darimana)</p><hr>
-            <p id="warna" class="p-isi">Aku gak tau tapi <b>kayaknya</b> aku suka kamu sejak kita terakhir kali main bareng. Aku awalnya nyari akun social media-mu tapi gak ketemu-ketemu terus entah kayak perasaanku itu semakin besar. Pertama kali dapet Instagram-mu itu pas Mbak Lia ngepost fotomu di story What'sApp ada username kamu terus langsung coba follow terus DM tuh...</p>
-            <p id="warna" class="p-isi">Aku gak berani langsung confess gara-gara takut ada orang lain yang kamu suka, terus tiba-tiba ada aja masalah yang datang makin gak berani deh eh suddenly you sent a letter pas aku baca sebenernya lupa tapi.. Aku cuma berharap kita gak terpisah seperti kemarin.</p>
-            <p id="warna" class="p-isi">Tahun 2012-2014 it was the best year. Bisa main tanpa rasa malu gak kayak sekarang tapi dulu aku juga pendiam sih wkwkwk, yang sering ngajak main apa itu kamu seingatku.<br>
-            Ngumpulin aqua gelas, Sepedaan tapi tukeran sepeda terus aku nabrak klo gak salah sampe ada orang yang negur, terus makan gula merah bareng. <br></p><br>
-            
-            <div id="story" class="text-box">
-                <h3 class="story">Short Story</h3>
-                <!-- <p>*2712 No Longer Available :/</p> -->
-                <p>Di sebuah desa kecil, terdapat dua anak kecil, seorang anak laki-laki dan seorang anak perempuan, menghabiskan hari-hari mereka bermain bersama. Mereka tertawa, berlarian, dan membangun kenangan yang tak terlupakan. Namun kebahagiaan mereka berubah ketika si gadis harus pindah ke luar negeri bersama keluarganya. Sebelum pergi, dia menyadari bahwa dia memiliki perasaan terhadap teman masa kecilnya, tetapi tidak pernah mendapat kesempatan untuk mengungkapkannya.</p>
-                <p>Sementara itu, si anak laki-laki merindukannya setiap hari. Dia mencoba berbagai cara untuk menghubunginya, dan setelah delapan tahun yang panjang, akhirnya dia berhasil. Ketika mereka terhubung kembali si anak perempuan menggunakan bahasa yang sedikit menjadi halangan si anak laki-laki, mereka berjanji untuk menunggu satu sama lain sampai suatu saat, apapun yang terjadi.</p>
-                <p>Namun, hidup tidak selalu baik. Seiring waktu, anak laki-laki itu berubah. Sebuah peristiwa besar dalam hidupnya membuatnya takut dan menghantui dirinya yang membuatnya susah menghadapi situasi sosial. Setelah lulus dari sekolah menengah, seorang gadis lain mengungkapkan perasaannya kepadanya. Gadis ini kebetulan tahu tentang teman masa kecilnya dan menghubunginya karena suatu alasan. Tak lama setelah itu, dia menerima surat dari teman masa kecilnya—surat yang mengungkapkan perasaan gadis itu. Namun karena bayangan yang mennghantui-nya, dia berpura-pura tidak pernah melihat isinya karena suatu alasan yang tidak bisa di jelaskan.</p>
-                <p>bayangan yang mennghantui-nya semakin dalam. Dia memilih untuk diam mengabaikan gadis yang telah mengungkapkan perasaannya dan tidak sengaja mengabaikan teman masa kecilnya juga. Suatu hari, dia melakukan kesalahan besar. Ketika mencoba menghubungi teman masa kecilnya, saat dia bertanya, "Apakah kamu sedang berkencan dengannya?"—merujuk pada gadis yang mengungkapkan perasaannya kepadanya—dia tidak bisa menjawab dengan benar padahal dia tidak berkencan dengan siapapun. Diamnya menyebabkan teman masa kecilnya salah paham, percaya bahwa dia benar-benar dalam hubungan dengan gadis itu dan membuatnya berpikir bawha dirinya adalah Second choice.</p>
-                <p>Seiring berjalannya waktu, dia terpaksa untuk untuk pindah dari desa itu dan memutuskan hubungan dengan semua orang yang ada di desa itu, termasuk teman masa kecilnya. Beberapa tahun kemudian, dia mencoba menghubunginya lagi, berharap untuk mengonfirmasi apakah janji mereka masih berlaku karena anak laki-laki tidak mau berpisah dengannya. Namun saat itu, teman masa kecilnya sudah kecewa dan dia bingung lalu diam dan tidak berani memberikan penjelasan.</p>
-                <p>Dengan setiap hari yang berlalu, penyesalannya semakin dalam. Dia sangat ingin menjelaskan semuanya dari awal, tetapi tertahan oleh rasa takut—takut karena dirinya tidak pantas dengan dia karena keluarga nya yang bermasalah dan takut karena bayangan yang mennghantui-nya. Pada akhirnya, anak laki-laki itu hidup dalam kesendirian, terperangkap dalam kenangan yang tidak pernah bisa dia lepaskan.</p>
-                <p>Namun, di dalam hatinya, anak laki-laki itu terus berharap agar dirinya sembuh dari bayangan yang menghalanginya untuk berbicara dengan jelas. Dia berharap suatu hari nanti, teman masa kecilnya akan menghubunginya lagi. Ketika itu terjadi, dia berjanji akan menjelaskan semuanya dari awal dan melawan bayangan yang menghantuinya yang (mungkin) menyebabkan kesalahpahaman tersebut.</p>
-                <p>Ada alasan lain yang membuatnya penakut dan menyebabkan dia kesulitan berbicara dengan jelas. Ketidakmampuannya untuk menyampaikan perasaan dan niatnya dengan tepat menyebabkan banyak kesalahpahaman, yang akhirnya mempengaruhi hubungannya dengan teman masa kecilnya. TAMAT?</p>
-            <span class="sok">- ?!!</span>
-            </div>     
-
-            <!-- <p id="warna" class="p-isi">"We listen We don't Judge"</p>
-            <div id="box" class="side-text-box">
-                <p id="warna" class="foryou">Pas kelas 1 SD temen sekelasku bikin candaan nama dikasih love terus nama orang lain, aku nulis namaku sendiri love inisial namamu apalagi ibu'e Tata nge cie-cie in aku padahal namanya kosong... bisa bisa nya masih bocil udah mikir kek gitu😭😭</p>
-            </div>
-            <h2 id="warna" class="h2-isi">you're the first to know</h2>
-            <p id="warna" class="p-isi">(yang pertama tau kecuali keluargaku)</p><hr>
-            <p id="warna" class="p-isi">Aku udah sering pindah rumah sering gak masuk sekolah karena masalah walaupun pindah tapi biasanya cuma 1-2 bulan paling cepet 1 minggu terus balik lagi ke rumah lama atau pindah gak jauh dari rumah lama, cuma pindah kali ini yang bener-bener memutus semuanya bahkan sekolahku juga sampai putus setahun, walaupun beberapa masalah diseleai-in dari sini. Kalo kamu tau Bu As, itu orangnya masih sering hubungi Anyak. Sebenernya ada alasan lain lagi tapi tunggu waktunya aja deh.<br></p><br> -->
-            <!-- <b>I never agree with what my family does,</b> tapi gatau lah aku gabisa keluar dari zona ini. My family has been hiding problems from me all this time, but that morning I found out that my dad was almost killed by someone di Sukorejo sana (pulang kerumah with bruised body, bleeding head, torn clothes), dan itu ternyata bukan bagian dari  masalah keluargaku lebih tepatnya <b>DI FITNAH.</b> itu alasan keluargaku pindah saat aku tanya "kok jauh" padahal semua setuju jalur hukum bahkan sudah disiapkan semuanya tapi Anyak gak setuju. ah sudahlah mungkin itu saja dulu kalau mau tau something DM aja.
-            <b><strong> It’s making me feel even more broken.. </strong></b> -->
-        </div>
-    </div>
-    <section id="bawah" class="newsletter">
-        <h2>Don't forget to <span style="font-family: 'Great Vibes', cursive;">be Grateful</span></h2>
-        <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100070356891708" id="a1"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/blueskyzii" id="a1"><i class="fab fa-instagram"></i></a>
-            <a href="https://discord.com/users/1211886368565895221" id="a1"><i class="fab fa-discord"></i></a>
-            <a href="mailto:alzidanirafa.01@gmail.com" id="a1"><i class="fas fa-envelope"></i></a>
-        </div>
-    </section>
     <script src="script.js"></script>
 </body>
 </html>
