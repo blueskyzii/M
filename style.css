@@ -167,9 +167,10 @@ body {
 
 /* Side Panel */
 .side-panel {
+	border-left: 1px solid #000000;
 	position: fixed;
 	top: 0;
-	left: 0px;
+	left: -500px;
 	width: 300px;
 	height: 100%;
 	background-color: #fff;
@@ -545,7 +546,7 @@ button:hover {
 }
 
 #hideButton {
-	display: none;
+	display: block;
 }
 
 #confess {
@@ -847,6 +848,10 @@ textarea {
 
 	.toggle-container {
 		right: 28%;
+	}
+
+	.newsletter {
+		width: 73%;
 	}
 }
 
