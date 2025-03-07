@@ -32,7 +32,7 @@ function toggleMenu() {
 }
 
 function toggleHamburgerVisibility() {
-	const hamburger = document.getElementById("hamburger");
+	const hamburger = document.getElementById("burger");
 
 	if (window.innerWidth >= 1025) {
 		hamburger.style.display = "none"; // Sembunyikan di desktop
